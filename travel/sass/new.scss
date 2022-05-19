@@ -1,0 +1,6 @@
+@import "./variable";
+@import "./header";
+
+.content{
+    @include flexCenter(row);
+}

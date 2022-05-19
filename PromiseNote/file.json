@@ -1,0 +1,12 @@
+{
+    "firstName":"john",
+    "lastName":"peter",
+    "phoneNo":["+2348037235438", "+2348036295764"],
+    "address":{
+        "city":"terminus",
+        "localGoverment":"jos north",
+        "state":"plateau",
+        "country":"nigeria"
+    },
+    "religion":"christianity"
+}

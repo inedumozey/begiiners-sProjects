@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			box-sizing:border-box;
+		}
+		body{
+			
+		}
+		img{
+			width:100%;
+			height: 100%;
+		}
+		.perspective{
+			width:100%;
+			height: 100vh;
+			border:1px solid blue;
+		}
+		.perspective_1{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.perspective_1 .container{
+			width:150px;
+			height: 200px;
+			background: rgba(0,0,0,.1);
+			transform: rotate(-20deg) skew(25deg,0);
+			margin-top:150px;
+			transition: 0.5s;
+			box-shadow:2px 2px 3px #000, -2px -2px 3px #ccc;
+			position: relative;
+		}
+		.perspective_1 .container img{
+			position: absolute;
+			width:100%;
+			height: 100%;
+			transition:.5s;
+			object-fit: cover;
+		}
+		.perspective_1 .container:hover img:nth-child(4){
+			transform: translate(80px, -80px);
+			opacity: 1;
+		}
+		.perspective_1 .container:hover img:nth-child(3){
+			transform: translate(60px, -60px);
+			opacity: .8;
+		}
+		.perspective_1 .container:hover img:nth-child(2){
+			transform: translate(40px, -40px);
+			opacity: .6;
+		}
+		.perspective_1 .container:hover img:nth-child(1){
+			transform: translate(20px, -20px);
+			opacity: .4;
+		}
+	/*//////////////////////////////////////////////////////////////////*/
+
+		.perspective_2{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #f3f3f3;
+		}
+		.perspective_2 .container{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;transition: .5s;
+			transform: skewY(-10deg);
+		}
+		.perspective_2 .container .card{
+			width:115px;
+			height:200px;
+			position: relative;
+			transition: .5s;
+			background: #fff;
+			margin:15px;
+		}
+		.perspective_2 .container .card:before{
+			content: "";
+			position: absolute;
+			top:-15px;
+			left: 0;
+			width:100%;
+			height: 15px;
+			background:#00c0f6;
+			transform-origin:bottom;
+			transform: skewX(45deg);
+			transition:.5s;
+		}
+		.perspective_2 .container .card:after{
+			content: "";
+			position: absolute;
+			top:-15px;
+			left: -15px;
+			width:15px;
+			height: 50%;
+			background:#00c0f6;
+			transform-origin:left;
+			transform: skewY(45deg);
+			transition:.5s;
+			border-bottom:100px solid #d9d9d9;
+		}
+		.perspective_2 .container .card:hover{
+			transform: translateY(-30px);
+		}
+		.perspective_2 .container .card .imgbx{
+			position: relative;
+			width:100%;
+			height:50%;
+			background:#00c7ff;
+			display:flex;
+			justify-content:center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.perspective_2 .container .card .imgbx img{
+			max-width:70px;
+			height:40px;
+			object-fit: cover;
+		}
+		.perspective_2 .container .card .imgbx h3{
+			position: relative;
+			color:#fff;
+			margin-top:10px;
+		}
+		.perspective_2 .container .card .content{
+			position:relative;
+			height: 50%;
+			padding:10px;
+			font-size: .8rem;
+			color:#777;
+			text-align: center;
+			background-color: #fff;
+		}
+		.perspective_2 .container .card .content:before{
+			content:"";
+			position: absolute;
+			left:0;
+			bottom:0;
+			width:100%;
+			height:200px;
+			background:linear-gradient(transparent, transparent, rgba(0,0,0,.1));
+			transform-origin: bottom;
+			transform: skewX(45deg);
+			z-index:-1;
+			transition: .5s;
+			pointer-events: none
+		}
+		.perspective_2 .container .card:hover .content:before{
+			transform: translateY(40px) skewX(45deg);
+			filter: blur(5px);
+			opacity: 0.5;
+		}
+		.perspective_2 .container .card:ntrh-child(1){
+			z-index: 3;
+		}
+		.perspective_2 .container .card:ntrh-child(2){
+			z-index: 2;
+		}
+		.perspective_2 .container .card:ntrh-child(3){
+			z-index: 1;
+		}
+/*////////////////////////////////////////////////////////////////////////////*/
+		.perspective_3{
+			background: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.perspective_3 .container{
+			width:350px;
+			height: 400px;
+			background: #000;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.perspective_3 .container .card{
+			width:112px;
+			height:200px;
+			position: relative;
+			transition:.5s;
+		}
+		.perspective_3 .container .card .face{
+			width:100%;
+			height:100px;
+			position: relative;
+			transition:.5s;
+		}
+		.perspective_3 .container .card .face.face1{
+			background:#333;
+			z-index: 1;
+			transform: translateY(50px);
+		}
+		.perspective_3 .container .card .face.face1 img{
+			width:100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			z-index: -1;
+			filter:blur(1px);
+		}
+		.perspective_3 .container .card .face.face1 h3{
+			color:#fff;
+			z-index: 100;
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+		}
+		.perspective_3 .container .card .face.face2{
+			background:#fff;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: column;
+			transform: translateY(-50px);
+			text-align: center;
+		}
+		.perspective_3 .container .card:hover .face.face1{
+			transform: translateY(0);
+		}
+		.perspective_3 .container .card:hover .face.face2{
+			transform: translateY(0);
+		}
+		.perspective_3 .container .card .face.face2 p{
+			font-size: .7rem;
+			color: #333;
+		}
+		.perspective_3 .container .card .face.face2 a{
+			text-decoration:none;
+			font-size:.6rem;
+			border:1px solid #333;
+			background: #000;
+			color:#fff;
+			border-radius:5px;
+			padding:5px 10px
+		}
+		.perspective_3 .container .card .face.face2 a:hover{
+			background: #fff;
+			color:#000;
+			border:1px solid #333;
+		}
+
+		.perspective_4{
+			background: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.perspective_4 .container{
+			width:350px;
+			background:#333;
+			height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.perspective_4 .container .book{
+			width:100px;
+			height: 130px;
+			background: url(bg.png);
+			background-size: cover;
+			border-left:10px solid red;
+			transform:rotate(-45deg) skew(10deg);
+			position: absolute;
+		}
+		.perspective_4 .container .book:before{
+			content: "";
+			position: absolute;
+			height: 100%;
+			top:0;
+			left:0px;
+			background: #c20;
+			width:10px;
+			transform: skewY(-45deg) translate(-20px, -16px);
+		}
+		.perspective_4 .container .book:after{
+			content: "";
+			position: absolute;
+			width: 110%;
+			background: #ccc;
+			height:10px;
+			z-index: -1;
+			bottom:0;
+			left: 0;
+			transform:skewX(-45deg) translate(-5px, 10px);
+		}
+		.perspective_4 .container .book img{
+			width:100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.perspective_5{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #7fff00;
+		}
+		.perspective_5 .bookPage{
+			width:150px;
+			height: 200px;
+			background:#fff;
+			position: absolute;
+			box-shadow: inset 150px 0 50px rgba(0,0,0,.7), 0 20px 100px rgba(0,0,0,.6);
+			transform-style: preserve-3d;
+			transition:1s;
+			transform:perspective(2000px);
+		}
+		.perspective_5 .bookPage .imgBox img{
+			width:100%;
+			height:100%;
+			object-fit: cover;
+		}
+		.perspective_5 .bookPage .imgBox{
+			width:100%;
+			height: 100%;
+			position: relative;
+			transform-origin: left;
+			transition:1s;
+		}
+		.perspective_5 .bookPage:hover{
+			box-shadow: inset 20px 0 40px rgba(0,0,0,.7), 0 150px 200px rgba(0,0,0,.6);
+			transform: perspective(2000px) rotate(-10deg);;
+		}
+		.perspective_5 .bookPage:hover .imgBox{
+			transform:rotateY(-150deg);
+		}
+		.perspective_5 .bookPage:before{
+			content:"";
+			position: absolute;
+			width:100%;
+			height: 3px;
+			top:-5px;
+			left:3px;
+			background:#005500;
+			transform: skewX(-50deg);
+		}
+		.perspective_5 .bookPage:after{
+			content:"";
+			position: absolute;
+			width:5px;
+			height:100%;
+			top:-2px;
+			right:-3px;
+			background:#005500;
+			transform: skewY(-50deg);
+		}
+		.perspective_5 .bookPage .details{
+			width:100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left:0;
+			padding:10px;
+			text-align: center;
+			z-index: -1;
+		}
+		.perspective_5 .bookPage .imgBox h3{
+			position: absolute;
+			bottom: 0;
+			right:0;
+			padding:10px;
+			font-size: 1rem;
+			color:#fff;
+		}
+		
+		.perspective_6{
+			background: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background:#333;
+			perspective: 800px;
+			background-image: url(bg.png);
+			background-size: cover;
+		}
+		.perspective_6 .box{
+			width:300px;
+			height: 300px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			animation: rotate 30s linear infinite;
+			align-items: center;
+			color:#fff; 
+			transform-style: preserve-3d;
+		}
+		.box div{
+			font-size: .6rem;
+			width:100%;
+			height: 100%;
+			position: absolute;
+			background:purple;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box div img{
+			width:100%;
+			height:100%;
+			object-fit: cover;
+		}
+		.perspective_6 .box .front{
+			transform:translateZ(150px);
+		}
+		.perspective_6 .box .back{
+			transform:rotateY(180deg) translateZ(150px);
+		}
+		.perspective_6 .box .left{
+			transform:rotateY(-90deg) translateX(-150px);
+			transform-origin:left;
+		}
+		.perspective_6 .box .right{
+			transform:rotateY(90deg) translateX(150px);
+			transform-origin:right;
+		}
+		.perspective_6 .box .top{
+			transform:rotateX(-90deg) translateY(-150px);
+			transform-origin:top;
+		}
+		.perspective_6 .box .bottom{
+			transform:rotateX(90deg) translateY(150px);
+			transform-origin:bottom;
+		}
+		@keyframes rotate{
+			0%{transform: rotateY(0deg);}
+			100%{transform: rotateY(360deg);}
+		}
+
+		.perspective_7{
+			background: #fff;
+			display: flex;
+			width:100vw;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			perspective: 800px;
+		}
+		.perspective_7 .container{
+			width:350px;
+			height: 350px;
+			transform-style: preserve-3d;
+			margin:auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			background: #220000;
+			z-index:-1;
+			animation: rotateBox 30s linear infinite;		
+		}
+		@keyframes rotateBox{
+			0%{transform: rotateY(0deg);}
+			100%{transform: rotateY(360deg);}
+		}
+		.perspective_7 .container div{
+			width:150px;
+			height: 200px;
+			background: blue;
+			color:#fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+		}
+		.perspective_7 .container .front{
+			transform:translateZ(200px);
+		}
+		.perspective_7 .container .back{
+			transform: rotateY(180deg);
+			
+		}
+		.perspective_7 .container .left{
+			transform:rotateY(-90deg);
+			transform-origin: left;
+			transition:all 10s;
+		}
+		.perspective_7 .container:hover .left{
+			transform:rotateY(-135deg);
+		}
+		.perspective_7 .container .right{
+			transform-origin: right;
+			transform:rotateY(90deg);
+		}
+		.perspective_7 .container .top{
+			transform-origin: top;
+			transform:rotateX(90deg);
+		}
+		.perspective_7 .container .bottom{
+			transform-origin: bottom;
+			transform:rotateX(-90deg);
+			background: red;
+		}
+		.perspective_8{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.perspective_8 .container{
+			width:350px;
+			height: 400px;
+			background: #ccc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			perspective: 1000px;
+		}
+		.perspective_8 .container .slider{
+			width:200px;
+			height:200px;
+			position: relative;
+			animation:  animate 100s linear infinite;
+			transform-style: preserve-3d;
+		}
+		@keyframes animate{
+			from{transform: rotateY(0deg);}
+			to{transform: rotateY(-360deg);}
+		}
+		.perspective_8 .container .slider:hover{
+			animation-play-state:paused;
+		}
+		.perspective_8 .container .slider div{
+			width:200px;
+			height:200px;
+			color:#fff;
+			background: #000;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+		.slider .image1{
+			transform: rotateY(0deg) translateZ(150px)
+		}
+		.slider .image2{
+			transform: rotateY(72deg) translateZ(150px)
+		}
+		.slider .image3{
+			transform: rotateY(144deg) translateZ(150px)
+		}
+		.slider .image4{
+			transform: rotateY(216deg) translateZ(150px)
+		}
+		.slider .image5{
+			transform: rotateY(288deg) translateZ(150px)
+		}
+		.slider .image6{
+			transform: rotateY(360deg) translateZ(150px)
+		}
+		.perspective_9{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.perspective_9 .container{
+			width:350px;
+			height: 400px;
+			background: #ccc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			perspective: 1000px;
+		}
+		.perspective_9 .container .box{
+			width:200px;
+			height:200px;
+			position: relative;
+			animation:  slide 40s linear infinite;
+			transform-style: preserve-3d;
+		}
+		@keyframes slide{
+			from{transform: rotateY(0deg);}
+			to{transform: rotateY(-360deg);}
+		}
+		.perspective_9 .container .box div{
+			width:200px;
+			height:200px;
+			color:#fff;
+			background: #000;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+		.box .img1{
+			transform: rotateY(-0deg) translateX(50px) translateZ(70px);
+		}
+		.box .img2{
+			transform: rotateY(-72deg) translateX(50px) translateZ(70px);
+		}
+		.box .img3{
+			transform: rotateY(-144deg) translateX(50px) translateZ(70px) ;
+		}
+		.box .img4{
+			transform: rotateY(-216deg) translateX(50px) translateZ(70px) ;
+		}
+		.box .img5{
+			transform: rotateY(-288deg) translateX(50px) translateZ(70px) ;
+		}
+		.box .img6{
+			transform: rotateY(-360deg) translateX(50px) translateZ(70px) ;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="perspective perspective_1">
+		<div class="container">
+			<img src="bg.png" alt="">
+			<img src="bg.png" alt="">
+			<img src="bg.png" alt="">
+			<img src="bg.png" alt="">
+		</div>
+	</div>
+	<div class="perspective perspective_2">
+		<div class="container">
+			<div class="card">
+				<div class="imgbx">
+					<img src="bg.png" alt="">
+					<h3>Design</h3>
+				</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="imgbx">
+					<img src="bg.png" alt="">
+					<h3>Code</h3>
+				</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="imgbx">
+					<img src="bg.png" alt="">
+					<h3>Launch</h3>
+				</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="perspective perspective_3">
+		<div class="container">
+			<div class="card">
+				<div class="face face1">
+					<img src="bg.png">
+					<h3>Design</h3>
+				</div>
+				<div class="face face2">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, placeat.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="face face1">
+					<img src="bg.png">
+					<h3>Coding</h3>
+				</div>
+				<div class="face face2">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, placeat.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="face face1">
+					<img src="bg.png">
+					<h3>Medicine</h3>
+				</div>
+				<div class="face face2">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, placeat.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="perspective perspective_4">
+		<div class="container">
+			<div class="page"></div>
+			<div class="book"></div>
+		</div>
+	</div>
+	<div class="perspective perspective_5">
+		<div class="bookPage">
+			<div class="imgBox">
+				<img src="bg.png" alt="">
+				<h3>Mozey</h3>
+			</div>
+			<div class="details">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, amet.</p>
+			</div>
+		</div>
+	</div>
+	<div class="perspective perspective_6">
+		<div class="box">
+			<div class="front">
+				<img src="1.jpg">
+			</div>
+			<div class="back">
+				<img src="2.jpg">
+			</div>
+			<div class="left">
+				<img src="3.jpg">
+			</div>
+			<div class="right">
+				<img src="4.jpg">
+			</div>
+			<div class="bottom">
+				<img src="5.jpg">
+			</div>
+			<div class="top">
+				<img src="6.jpg">
+			</div>
+		</div> v
+	</div>
+	<div class="perspective perspective_7">
+		<div class="container">
+			<div class="front">front</div>
+			<div class="back">back</div>
+			<div class="left">left</div>
+			<div class="right"><img src="3.jpg" style="width:100%;height:100%"></div>
+			<div class="top">top</div>
+			<div class="bottom">bottom</div>
+		</div>
+	</div>
+	<div class="perspective perspective_8">
+		<div class="container">
+			<div class="slider">
+				<div class="image1"><img src="1.jpg"></div>
+				<div class="image2"><img src="2.jpg"></div>
+				<div class="image3"><img src="3.jpg"></div>
+				<div class="image4"><img src="4.jpg"></div>
+				<div class="image5"><img src="5.jpg"></div>
+				<div class="image6"><img src="6.jpg"></div>
+			</div>
+		</div>
+	</div>
+	<div class="perspective perspective_9">
+		<div class="container">
+			<div class="box">
+				<div class="img1"><img src="1.jpg"></div>
+				<div class="img2"><img src="2.jpg"></div>
+				<div class="img3"><img src="3.jpg"></div>
+				<div class="img4"><img src="4.jpg"></div>
+				<div class="img5"><img src="5.jpg"></div>
+				<div class="img5"><img src="6.jpg"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

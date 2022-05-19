@@ -1,0 +1,209 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: calibri;
+}
+
+.error_text{
+	color:red;
+	width:100%;
+	font-style:italic;
+	font-size:.7rem;
+	position: absolute;
+	top:33px;
+	left:50%;
+	transition: .3s;
+	text-align: center;
+	transform: translateX(-50%);
+}
+.blink{
+	color:transparent;
+}
+.todo_input_wrapper{
+	width:70%;
+	height:100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	background: #000;
+}
+.todo_wrapper{
+	width:350px;
+	min-height: 50px;
+	background:#000;
+	margin:auto;
+	padding:5px;
+	border-radius:5px;
+}
+.header{
+	display: flex;
+	position: relative;
+}
+select{
+	outline: none;
+	border:none;
+	color: #c30;
+	cursor: pointer;
+
+}
+.filter{
+	width:30%;
+	background:#ccc;
+	overflow: hidden;
+	position: relative;
+}
+.todo_input{
+	width:100%;
+	height:29px;
+	border:none;
+	outline:none;
+	padding:10px;
+}	
+.todo_input_add_btn{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:10%;
+	height:29px;
+	background:#fff;
+	align-items: center;
+	position: relative;
+	transition:all .1s;
+}
+.line{
+	width:50%;
+	height:4px;
+	background:#f09105;
+	position: absolute;
+	transition:all .5s;
+}
+.line2{
+	transform:rotate(90deg);
+}
+
+.todo_input_add_btn:hover{
+	background:#f09105;
+}
+.todo_input_add_btn:hover > .line{
+	background:#fff;
+}
+.todo_list_container{
+	width:100%;
+	height:auto;
+	margin:20px auto;			
+}
+.list{
+	width:100%;
+	border:1px solid #000;
+	display:flex;
+	margin:5px 0;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 1s;
+}
+.add_line_through{
+	text-decoration:line-through;
+	font-style:italic;
+	opacity:.6
+}
+.add_shake_animation{
+	animation: shake 1s
+}
+@keyframes shake{
+	0%{transform:scale(1)}
+	100%{transform:scale(.9)}
+}
+.add_fall_animation{
+	transform:rotateZ(720deg);
+	opacity: 0
+}
+
+.todo{
+	width:85%;
+	height:29px;
+	text-align: left;
+	word-wrap:break-word;
+	padding:4px;
+	background:#fff;
+}
+.checked, .del{
+	height:29px;
+	width:calc(15% / 2);
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	position:relative;
+	transition: all 1s;
+}
+.del{
+	background:#fff
+	
+}
+.checked{
+	background:#fff;
+}
+.checked_line, .del_line{
+	width:60%;
+	height:3px;
+	position: absolute;
+	transition: all 1s;
+}
+.del_line{
+	background:red;
+}
+.checked_line{
+	background:blue;
+}
+.checked_line1{
+	width:65%;
+	top:50%;
+	left:30%;
+	transform: rotate(-60deg);
+}
+.checked_line2{
+	width:40%;
+	top:64%;
+	left:19%;
+	transform: rotate(50deg);
+}
+.del_line1{
+	transform:rotate(45deg);
+}
+.del_line2{
+	transform:rotate(-45deg);
+}
+.del:hover{
+	background: red
+}
+.del:hover > .del_line{
+	background: #fff
+} 
+.checked:hover{
+	background:blue;
+}
+.checked:hover > .checked_line{
+	background: #fff
+} 
+
+.go{
+	width:250px;
+	height:40px;
+	background: #220000;
+	margin:10px auto 20px auto;
+	transition:all .2s;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5rem;
+	border-radius:6px;
+	color:#fff;
+}
+.add{
+	color: transparent;
+}
+.rotate{
+	transform: rotateZ(720deg);
+}
+

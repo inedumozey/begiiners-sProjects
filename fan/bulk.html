@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="play_nav.css">
+
+	<style>
+		/*utility styling,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+
+*,
+*::before,
+*::after{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration:none;
+}
+
+:root{
+	--header-1:#000;
+	--header-2:#272525;
+	--body-bg:#62635f;
+	--nav-to-border:#c40;
+	--nav-bg:#272525;
+}
+body{
+	padding:0;
+	margin:0;
+	width:100%;
+	min-height: 100vh;
+	font-family: serif;
+	background:var(--body-bg);
+	background-repeat: no-repeat;
+}
+/*end of utility*/
+
+
+/*header styling begins,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+
+.header{
+	width:100%;
+	height: 4em;
+	background-image: linear-gradient(180deg, #000 40%, #272525 73%);
+	background-repeat: no-repeat;
+	padding:0 10px;
+	position: relative;
+	box-shadow:0px 2px 10px #d1d1d1;
+}
+
+
+.logo{
+	padding:8px 20px;
+	font-size: 2em;
+	width:27%;
+}
+.logo .l1{
+	color:#d1d1d1;
+	font-family: sans-serif;
+	text-transform: uppercase;
+}
+.logo .l2{
+	color:#c20;
+	font-family: cursive;
+	text-transform: lowercase;
+}
+
+
+.nav{
+	position: absolute;
+	top: 100%;
+	left:0;
+	width:100%;
+	height: auto;
+	border-top:2px solid var(--nav-to-border);
+	background: var(--nav-bg);
+	box-shadow:0px 2px 10px #d1d1d1;
+	padding:10px 20px;
+	transition: .4s;
+	transform-origin: top;
+	transform: scale(1,0);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, 40px);
+}
+.nav li{
+	padding-bottom:15px;
+	text-align: center;
+}
+.nav a{
+	color:#c40;
+	position: relative;
+	font-size: 1.1em;
+	padding:10px;
+	transition:transform .5s;
+	opacity: 0;
+}
+.nav a:before{
+	content:"";
+	position: absolute;
+	width:80%;
+	height: 1px;
+	background:#c40;
+	bottom:20%;
+	left:9px;
+	transition:.4s;
+	transform-origin: left;
+	transform: scale(0,1); 
+}
+.nav a:hover{
+	color:#fff
+}
+.nav a:hover:before{
+	transform: scale(1,1);
+}
+
+
+.display-toggle{
+	height:100%;
+	width:20px;
+	position: absolute;
+	z-index: 1000;
+	top:0;
+	right:40px;
+	cursor:pointer;
+	display: block;
+}
+.clear-toggle{
+	height:100%;
+	width:20px;
+	position: absolute;
+	z-index: 1000;
+	top:0;
+	right:40px;
+	display: none;
+	cursor:pointer;
+}
+.up,
+.mid,
+.down,
+.cr1,
+.cr2{
+	width:100%;
+	height:3px;
+	background:#d1d1d1;
+	position: absolute;
+}
+.up{
+	top:40%;
+}
+.mid{
+	top:50%;
+}
+.down{
+	top:60%;
+}
+.cr1{
+	top:32px;
+	transform: rotate(-125deg);
+	background: #c40;
+}
+.cr2{
+	top:32px;
+	transform: rotate(125deg);
+	background: #c40;
+}
+
+
+@media only screen and (min-width: 600px){
+	.nav{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 40px);
+	}
+	.nav li{
+		text-align: center;
+	}
+	
+}
+
+
+@media only screen and (min-width: 950px){
+	.display-toggle{
+		display: none;
+		visibility: hidden;
+		appearance:hidden;
+	}
+	.clear-toggle{
+		display: none;
+		visibility: hidden;
+		appearance:hidden;
+	}
+
+
+	.nav-wrapper{
+		position:absolute;
+		height:4em;
+		width:60%;
+		top:0;
+		right:30px;
+	}
+	.wrapper{
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling:touch;
+		white-space: wrap;
+	}
+	.nav-wrapper::-webkit-scrollbar{
+		display: none;
+	}
+
+
+	.nav{
+		top:0;
+		padding:0;  
+		background: transparent;
+		border-top:none;
+		box-shadow:none;
+		transform: scale(1,1);
+		display: flex;
+	}
+	.nav a{
+		opacity: 1;
+	}
+
+	.nav li{
+		padding: 8px ;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	
+	.arrow-left,
+	.arrow-right{
+		height:100%;
+		width:15px;
+		position: absolute;
+		z-index: 1000;
+		top:0;
+		cursor:pointer;
+	}
+	.arrow-left{
+		left:35.8%
+	}
+	.arrow-right{
+		right:10px
+	}
+	.arrow-left .a1,
+	.arrow-left .a2,
+	.arrow-right .a1,
+	.arrow-right .a2{
+		width:100%;
+		height:3px;
+		background:#c40;
+		position: absolute;
+	}
+	.arrow-left .a1{
+		top:37%;
+		transform:rotate(-45deg);
+	}
+	.arrow-left .a2{
+		top:50%;
+		transform:rotate(45deg);
+	}
+
+	.arrow-right .a1{
+		top:37%;
+		transform:rotate(45deg);
+	}
+	.arrow-right .a2{
+		top:50%;
+		transform:rotate(-45deg);
+	}
+
+}
+/*end of header*/
+
+/*section-1 styling begins,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+
+/*footer styling begins here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+	.footer{
+		width:100%;
+		background: #000;
+		padding:10px;
+		min-height:4em; 
+		z-index: 100000;
+	}
+
+	.container{
+		max-width:95%;
+		padding:20px;
+		margin:20px auto;
+		background: #000;
+		border-radius: 10px;
+		box-shadow:-2px -2px 10px #d1d1d1, 2px 2px 10px #d1d1d1;
+	}
+	
+	.boxcheck{
+		display: none;
+	}
+
+	label.hey{
+		text-align: center;
+		background: red;
+		padding:10px;
+		color:#ffc6ff;
+		width:100%;
+		display: inline-block;
+		cursor: pointer;
+		font-weight: 800;
+		font-size: 1.5em;
+ 		text-transform:uppercase;
+		border-bottom:1px solid #ffc6ff;
+		position:relative;
+	}
+
+	label.hey:after{
+		content:"";
+		position:absolute;
+		color:black;
+		top:75%;
+		right:50%;
+		transform:translateX(50%);
+		width:2px;
+		height:2px;
+		border-top:10px solid black;
+		border-bottom:10px solid transparent;
+		border-right:10px solid transparent;
+		border-left:10px solid transparent;
+		transition:all 1s;
+	}	
+
+	div.content{
+		width:100%;
+		height:auto;
+		margin-bottom: 10px;
+		padding:15px;
+		display: none;
+	}
+
+	p.caption{
+		color: #fff;
+		text-align:center;
+		line-height: 1.5em;
+	}
+	
+	.boxcheck:checked ~div.content{
+		display: block;
+		}
+	.boxcheck:checked~label.hey:after{
+		transform-origin:top;
+		top:70%;
+		transform:translateY(-65%);
+		right:10px;
+		transform: rotate(0.5turn);
+		border-top:10px solid red;
+		}
+	.boxcheck:checked ~label{
+		color:white;
+		background-color:blue;
+    
+	}
+
+	.container2{
+		max-width:95%;
+		padding:20px;
+		margin:20px auto;
+		background:teal;
+		border-radius: 10px;
+		box-shadow:-2px -2px 10px #d1d1d1, 2px 2px 10px #d1d1d1;
+	}
+
+	.text1{
+		color:red;
+		background:#000;
+		margin-bottom: 20px;
+		padding:15px;
+		line-height: 1.5em;
+	}
+
+
+	.text1 .heading{
+		color:#fff;
+		line-height: 1em;
+		font-size: 2em;
+		text-align: center;
+		background: blue;
+		padding:15px;
+		margin-bottom: 5px;
+	}
+
+	.text1 .text2{
+		font-size: .9em;
+	}
+
+
+	@media only screen and (min-width: 800px){
+		.container{
+			max-width:60%;
+			margin:20px auto;
+		}
+		div.box{
+			margin:0 20px;
+		}
+		.container2{
+			max-width:60%;
+		}
+
+	}
+
+	@media only screen and (min-width: 1000px){
+		.container{
+			width:95%;
+			min-height:20vh;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin:20px auto;
+		}
+
+		label.hey:after{
+			top:75%;
+			right:35%;
+			transform:translateX(-35%);
+		}
+		.boxcheck:checked~label.hey:after{
+			top:70%;
+			transform:translateY(-65%);
+			right:10px;
+			transform: rotate(0.5turn);
+		}
+		div.box{
+			margin:5px;
+		}
+
+		.container2{
+			width:95%;
+			min-height:20vh;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin:20px auto;
+		}
+		.text1{
+			margin:5px;
+		}
+
+	}
+
+/*end of section-1*/
+
+
+/*section-3 styling,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+
+	.container3{
+		width:100%;
+		height: auto;
+		margin:20px auto 30px auto;
+	}
+	.card{
+		margin:0 auto;
+		width:95%;
+		min-height: 500px;
+		background: yellow;
+		position: relative;
+	}
+	.card .balls .ball{
+		position: absolute;
+		width:50px;
+		height:50px;
+		border-radius: 50%;
+		bottom:-18px;
+		background:yellow;
+	}
+	.ball:before{
+		content:"";
+		position:absolute;
+		width:40%;
+		height: 40%;
+		background: #000;
+		top:20px;
+		border-radius: 50%;
+	}
+	.ball:after{
+		content:"8";
+		color:red;
+		font-size: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position:absolute;
+		width:20%;
+		height: 20%;
+		background: #fff;
+		top:25px;
+		border-radius: 50%;
+	}
+	.ball-2{
+		left:10%;
+		background: red;
+		animation: ball2 1.6s infinite linear;
+	}
+	.ball-3{
+		left:32%;
+		
+		animation: ball3 1.2s infinite linear;
+	}
+	.ball-4{
+		left:58%;
+		animation: ball4 .8s infinite linear;
+	}
+	.ball-5{
+		left:80%;
+		animation: ball5 .4s infinite linear;
+	}
+	
+
+	@keyframes ball2{
+		0%{transform:rotate(-1turn);}
+	}
+	@keyframes ball3{
+		0%{transform:rotate(-1turn);}
+	}
+	@keyframes ball4{
+		0%{transform:rotate(-1turn);}
+	}
+	@keyframes ball5{
+		0%{transform:rotate(-1turn);}
+	}
+
+
+	.fans{
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		height: 70%;
+		width: 70%;
+		position: absolute;
+	
+	}
+
+	.fan-1:before{
+		content:"";
+		position: absolute;
+		background: green;
+		height:40px;
+		width: 240px;
+		top:10%;
+		left:2%;
+		margin-top:78px;
+		border-radius:50% 0 50% 0;
+		z-index: -10;
+	}
+	.fan-1{
+		position: relative;
+		width:250px;
+		height:250px;
+		border:1px solid red;
+		left:-.5%;
+		overflow:hidden;
+		border-radius:50% ;
+		z-index: 100;
+		transform:skew(10deg);
+
+	}
+	.anchor:before{
+		content:"";
+		position: absolute;
+		width:40px;
+		height:200px;
+		background: red;
+		top:-24%;
+		left:0%;
+		border-radius:0 50% 0 50%;
+	}
+	.anchor{
+		position: absolute;
+		height: 270px;
+		width:40px;
+		background:black;
+		border-radius: 30% 30% 0 0;
+		left:50%;
+		top:70%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+	.center{
+		width:65px;
+		height:65px;
+		border-radius: 50%;
+		background: black;
+		position: absolute;
+		border:1px solid white;
+		top:40%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		z-index:1000;
+	}
+	.center:before{
+		content:"";
+		width:40%;
+		height:40%;
+		border-radius: 50%;
+		background: #fff;
+		position: absolute;
+		top:30%;
+		left:30%;
+		z-index:1000;
+	}
+	.stand{
+		width:150px;
+		height:70px;
+		border-radius:;
+		background: #000;
+		position: absolute;
+		left:50%;
+		top:110%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content:center;
+		align-items: flex-end;
+		padding:10px 0;
+		border-radius: 10px;
+		
+	}
+
+
+#off,
+#on-x,
+#on-1,
+#on-2{-webkit-appearance:none;}
+
+.off,
+.on{
+	width:33%;
+	height: 20px;
+	padding:3px;
+	display: inline-block;
+	text-align: center;
+	display: inline-block;
+	background: red;
+	font-size: .8em;
+	border-radius: 30%;
+}
+
+.off{
+	border-right:3px solid teal;
+	border-left:3px solid teal;
+	color:#fff;
+	background: red;
+	position: absolute;
+	top:15%;
+	left:30%;
+}
+.on-x{
+	border-right:3px solid teal;
+	border-left:3px solid teal;
+	background:purple;
+	color:#fff;
+}
+.on-1{
+	border-right:3px solid teal;
+	border-left:3px solid teal;
+	color:#fff;
+	background:blue;
+}
+.on-2{
+	border-right:3px solid teal;
+	border-left:3px solid teal;
+	background:green;
+	color:#fff;
+}
+
+/*animation*/
+
+
+/*off*/
+#off:checked~.senter .fan-1{animation:off none;}
+#off:checked~.senter .fan-1:before{animation:off none;}
+#off:checked~.anchor:before{animation:off none;}
+
+/*on*/
+#on-x:checked~.senter .fan-1{animation: onfan 3.5s linear infinite alternate;}
+#on-x:checked~.senter .fan-1:before{animation: on 2s linear infinite;}
+#on-x:checked~.anchor:before{animation: on 2s linear infinite;}
+
+/*spd-1*/
+#on-1:checked~.senter .fan-1{animation: spdfan-1 3.4s linear infinite alternate;}
+#on-1:checked~.senter .fan-1:before{animation: spd-1 .5s linear infinite;}
+#on-1:checked~.anchor:before{animation: spd-1 .5s linear infinite;}
+
+/*spd-2*/
+#on-2:checked~.senter .fan-1{animation: spdfan-2 3.5s linear infinite alternate;}
+#on-2:checked~.senter .fan-1:before{animation: spd-2 .2s linear infinite;}
+#on-2:checked~.anchor:before{animation: spd-2 .2s linear infinite;}
+
+	/*@keyframes off{
+		0%{}
+	}*/
+
+	@keyframes onfan{
+		0%{transform:skew(30deg);}
+	}
+
+	@keyframes on{
+		0%{transform-origin:center;transform:rotate(.5turn);}
+	}
+
+	@keyframes spdfan-1{
+		0%{transform:skew(30deg);}
+	}
+	
+	@keyframes spd-1{
+		0%{transform-origin:center;transform:rotate(.5turn);}
+	}
+
+	@keyframes spdfan-2{
+		0%{transform:skew(30deg);}
+	}
+	
+	@keyframes spd-2{
+		0%{transform-origin:center;transform:rotate(.5turn);}
+	}
+
+	
+	
+	</style>
+
+</head>
+<body>
+	
+	<header class="header">
+		<div class="logo">
+			<a href="#"><span class="l1">Tra</span><span class="l2">vels</span></a>
+		</div>
+		<div class="togglebox">
+			<div class="display-toggle">
+				<div class="up"></div>
+				<div class="mid"></div>
+				<div class="down"></div>
+			</div>
+			<div class="clear-toggle">
+				<div class="cr1"></div>
+				<div class="cr2"></div>
+			</div>
+		</div>
+		<div class="arrow-left">
+			<div class="a1"></div>
+			<div class="a2"></div>
+		</div>
+		<div class="nav-wrapper wrapper">
+			<ul class="nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Tutorials</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="#">Tourism</a></li>
+				<li><a href="#">Videos</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Articles</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+		</div>
+		<div class="arrow-right">
+			<div class="a1"></div>
+			<div class="a2"></div>
+		</div>
+	</header>
+	
+	<section class="section-1">
+		<main>
+
+			<div class="container3">
+				<div class="card">
+					<div class="balls">
+						<div class="ball ball-2"></div>
+						<div class="ball ball-3"></div>
+						<div class="ball ball-4"></div>
+						<div class="ball ball-5"></div>
+					</div>
+
+					<div class="fans">
+						<input type="radio" name="fancheck" id="off">
+						<input type="radio" name="fancheck" id="on-x">
+						<input type="radio" name="fancheck" id="on-1">
+						<input type="radio" name="fancheck" id="on-2">
+						<div class="center"></div>
+						<center class="senter" style>
+							<div class="fan-1">
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+								*******************************<br>
+							</div>
+						</center>
+						<div class="anchor"></div>
+						<div class="stand">
+							<label for="off" class="off">OFF</label>
+							<label for="on-x" class="on on-x">ON</label>
+							<label for="on-1" class="on on-1">SPD 1</label>
+							<label for="on-2" class="on on-2">SPD 2</label>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box1">
+					<label for="box1" class="hey">Weather</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box2">
+					<label for="box2" class="hey">Topography</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box3">
+					<label for="box3" class="hey">Culture</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box4">
+					<label for="box4" class="hey">Employment</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box5">
+					<label for="box5" class="hey">Politics</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box6">
+					<label for="box6" class="hey">Schools</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box7">
+					<label for="box7" class="hey">Religion</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box8">
+					<label for="box8" class="hey">Tourism</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box9">
+					<label for="box9" class="hey">Technology</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+				</div>
+				<div class="box">
+					<input type="checkbox" class="boxcheck" id="box10">
+					<label for="box10" class="hey">Health</label>
+					<div class="content">
+						<div class="image">
+							<img src="images/night.jpg" style="width:100%;height:100%" alt="">
+						</div>
+						<p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero odio, amet omnis voluptate iste, alias quibusdam mollitia, consequatur voluptatum assumenda, possimus.</p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="container2">
+				<div class="text1">
+					<h1 class="heading">USA</h1>
+					<p class=text2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates dolores eius est praesentium facilis dolorem odit. Eveniet tempora, perspiciatis quas veniam quo amet recusandae, consequatur fugit fugiat nemo. Iste assumenda earum qui minus, quidem error nostrum voluptatum voluptate sint quaerat officiis veniam facilis quis modi at, repudiandae, expedita non voluptas vel rem libero ratione cumque! Perspiciatis voluptatum saepe placeat ratione voluptatibus in, sed accusamus, odio ducimus aut enim numquam sint quod at expedita et dolores accusantium. Esse, necessitatibus! Exercitationem assumenda modi, ipsum unde! Quis, doloribus. Officia itaque inventore fugit nobis exercitationem soluta iusto ad, quis, architecto qui eum natus explicabo debitis odit modi nesciunt, tenetur est. Veniam, eveniet nulla natus amet consequuntur laborum culpa sequi ipsam minus accusantium porro perferendis dolores magni suscipit beatae nobis officiis tempore laudantium non cum maxime. Libero ab fuga unde quod sint neque laudantium, esse quisquam commodi repellendus, nam! Asperiores minima sapiente beatae, ea modi atque laudantium sit vero quia debitis vitae aspernatur molestias, odio magnam quasi suscipit natus! Aspernatur quia rem labore! A, aperiam! Magnam perferendis id alias eligendi fuga debitis. Qui saepe sed atque cum, sunt. Ad reprehenderit beatae ducimus ab necessitatibus ex sequi, excepturi dolore veritatis officiis, minus provident nisi magni.</p>				
+				</div>
+
+				<div class="text1">
+					<h1 class="heading">Northen Ireland</h1>
+					<p class=text2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates dolores eius est praesentium facilis dolorem odit. Eveniet tempora, perspiciatis quas veniam quo amet recusandae, consequatur fugit fugiat nemo. Iste assumenda earum qui minus, quidem error nostrum voluptatum voluptate sint quaerat officiis veniam facilis quis modi at, repudiandae, expedita non voluptas vel rem libero ratione cumque! Perspiciatis voluptatum saepe placeat ratione voluptatibus in, sed accusamus, odio ducimus aut enim numquam sint quod at expedita et dolores accusantium. Esse, necessitatibus! Exercitationem assumenda modi, ipsum unde! Quis, doloribus. Officia itaque inventore fugit nobis exercitationem soluta iusto ad, quis, architecto qui eum natus explicabo debitis odit modi nesciunt, tenetur est. Veniam, eveniet nulla natus amet consequuntur laborum culpa sequi ipsam minus accusantium porro perferendis dolores magni suscipit beatae nobis officiis tempore laudantium non cum maxime. Libero ab fuga unde quod sint neque laudantium, esse quisquam commodi repellendus, nam! Asperiores minima sapiente beatae, ea modi atque laudantium sit vero quia debitis vitae aspernatur molestias, odio magnam quasi suscipit natus! Aspernatur quia rem labore! A, aperiam! Magnam perferendis id alias eligendi fuga debitis. Qui saepe sed atque cum, sunt. Ad reprehenderit beatae ducimus ab necessitatibus ex sequi, excepturi dolore veritatis officiis, minus provident nisi magni.</p>		
+				</div>
+
+				<div class="text1">
+					<h1 class="heading">England</h1>
+					<p class=text2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates dolores eius est praesentium facilis dolorem odit. Eveniet tempora, perspiciatis quas veniam quo amet recusandae, consequatur fugit fugiat nemo. Iste assumenda earum qui minus, quidem error nostrum voluptatum voluptate sint quaerat officiis veniam facilis quis modi at, repudiandae, expedita non voluptas vel rem libero ratione cumque! Perspiciatis voluptatum saepe placeat ratione voluptatibus in, sed accusamus, odio ducimus aut enim numquam sint quod at expedita et dolores accusantium. Esse, necessitatibus! Exercitationem assumenda modi, ipsum unde! Quis, doloribus. Officia itaque inventore fugit nobis exercitationem soluta iusto ad, quis, architecto qui eum natus explicabo debitis odit modi nesciunt, tenetur est. Veniam, eveniet nulla natus amet consequuntur laborum culpa sequi ipsam minus accusantium porro perferendis dolores magni suscipit beatae nobis officiis tempore laudantium non cum maxime. Libero ab fuga unde quod sint neque laudantium, esse quisquam commodi repellendus, nam! Asperiores minima sapiente beatae, ea modi atque laudantium sit vero quia debitis vitae aspernatur molestias, odio magnam quasi suscipit natus! Aspernatur quia rem labore! A, aperiam! Magnam perferendis id alias eligendi fuga debitis. Qui saepe sed atque cum, sunt. Ad reprehenderit beatae ducimus ab necessitatibus ex sequi, excepturi dolore veritatis officiis, minus provident nisi magni.</p>		
+				</div>
+
+				<div class="text1">
+					<h1 class="heading">Nigeria</h1>
+					<p class=text2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates dolores eius est praesentium facilis dolorem odit. Eveniet tempora, perspiciatis quas veniam quo amet recusandae, consequatur fugit fugiat nemo. Iste assumenda earum qui minus, quidem error nostrum voluptatum voluptate sint quaerat officiis veniam facilis quis modi at, repudiandae, expedita non voluptas vel rem libero ratione cumque! Perspiciatis voluptatum saepe placeat ratione voluptatibus in, sed accusamus, odio ducimus aut enim numquam sint quod at expedita et dolores accusantium. Esse, necessitatibus! Exercitationem assumenda modi, ipsum unde! Quis, doloribus. Officia itaque inventore fugit nobis exercitationem soluta iusto ad, quis, architecto qui eum natus explicabo debitis odit modi nesciunt, tenetur est. Veniam, eveniet nulla natus amet consequuntur laborum culpa sequi ipsam minus accusantium porro perferendis dolores magni suscipit beatae nobis officiis tempore laudantium non cum maxime. Libero ab fuga unde quod sint neque laudantium, esse quisquam commodi repellendus, nam! Asperiores minima sapiente beatae, ea modi atque laudantium sit vero quia debitis vitae aspernatur molestias, odio magnam quasi suscipit natus! Aspernatur quia rem labore! A, aperiam! Magnam perferendis id alias eligendi fuga debitis. Qui saepe sed atque cum, sunt. Ad reprehenderit beatae ducimus ab necessitatibus ex sequi, excepturi dolore veritatis officiis, minus provident nisi magni.</p>		
+				</div>
+
+				<div class="text1">
+					<h1 class="heading">Wales</h1>
+					<p class=text2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates dolores eius est praesentium facilis dolorem odit. Eveniet tempora, perspiciatis quas veniam quo amet recusandae, consequatur fugit fugiat nemo. Iste assumenda earum qui minus, quidem error nostrum voluptatum voluptate sint quaerat officiis veniam facilis quis modi at, repudiandae, expedita non voluptas vel rem libero ratione cumque! Perspiciatis voluptatum saepe placeat ratione voluptatibus in, sed accusamus, odio ducimus aut enim numquam sint quod at expedita et dolores accusantium. Esse, necessitatibus! Exercitationem assumenda modi, ipsum unde! Quis, doloribus. Officia itaque inventore fugit nobis exercitationem soluta iusto ad, quis, architecto qui eum natus explicabo debitis odit modi nesciunt, tenetur est. Veniam, eveniet nulla natus amet consequuntur laborum culpa sequi ipsam minus accusantium porro perferendis dolores magni suscipit beatae nobis officiis tempore laudantium non cum maxime. Libero ab fuga unde quod sint neque laudantium, esse quisquam commodi repellendus, nam! Asperiores minima sapiente beatae, ea modi atque laudantium sit vero quia debitis vitae aspernatur molestias, odio magnam quasi suscipit natus! Aspernatur quia rem labore! A, aperiam! Magnam perferendis id alias eligendi fuga debitis. Qui saepe sed atque cum, sunt. Ad reprehenderit beatae ducimus ab necessitatibus ex sequi, excepturi dolore veritatis officiis, minus provident nisi magni.</p>		
+				</div>
+
+				<div class="text1">
+					<h1 class="heading">Canada</h1>
+					<p class=text2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates dolores eius est praesentium facilis dolorem odit. Eveniet tempora, perspiciatis quas veniam quo amet recusandae, consequatur fugit fugiat nemo. Iste assumenda earum qui minus, quidem error nostrum voluptatum voluptate sint quaerat officiis veniam facilis quis modi at, repudiandae, expedita non voluptas vel rem libero ratione cumque! Perspiciatis voluptatum saepe placeat ratione voluptatibus in, sed accusamus, odio ducimus aut enim numquam sint quod at expedita et dolores accusantium. Esse, necessitatibus! Exercitationem assumenda modi, ipsum unde! Quis, doloribus. Officia itaque inventore fugit nobis exercitationem soluta iusto ad, quis, architecto qui eum natus explicabo debitis odit modi nesciunt, tenetur est. Veniam, eveniet nulla natus amet consequuntur laborum culpa sequi ipsam minus accusantium porro perferendis dolores magni suscipit beatae nobis officiis tempore laudantium non cum maxime. Libero ab fuga unde quod sint neque laudantium, esse quisquam commodi repellendus, nam! Asperiores minima sapiente beatae, ea modi atque laudantium sit vero quia debitis vitae aspernatur molestias, odio magnam quasi suscipit natus! Aspernatur quia rem labore! A, aperiam! Magnam perferendis id alias eligendi fuga debitis. Qui saepe sed atque cum, sunt. Ad reprehenderit beatae ducimus ab necessitatibus ex sequi, excepturi dolore veritatis officiis, minus provident nisi magni.</p>		
+				</div>
+
+				<div class="text1">
+					<h1 class="heading">Scotland</h1>
+					<p class=text2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates dolores eius est praesentium facilis dolorem odit. Eveniet tempora, perspiciatis quas veniam quo amet recusandae, consequatur fugit fugiat nemo. Iste assumenda earum qui minus, quidem error nostrum voluptatum voluptate sint quaerat officiis veniam facilis quis modi at, repudiandae, expedita non voluptas vel rem libero ratione cumque! Perspiciatis voluptatum saepe placeat ratione voluptatibus in, sed accusamus, odio ducimus aut enim numquam sint quod at expedita et dolores accusantium. Esse, necessitatibus! Exercitationem assumenda modi, ipsum unde! Quis, doloribus. Officia itaque inventore fugit nobis exercitationem soluta iusto ad, quis, architecto qui eum natus explicabo debitis odit modi nesciunt, tenetur est. Veniam, eveniet nulla natus amet consequuntur laborum culpa sequi ipsam minus accusantium porro perferendis dolores magni suscipit beatae nobis officiis tempore laudantium non cum maxime. Libero ab fuga unde quod sint neque laudantium, esse quisquam commodi repellendus, nam! Asperiores minima sapiente beatae, ea modi atque laudantium sit vero quia debitis vitae aspernatur molestias, odio magnam quasi suscipit natus! Aspernatur quia rem labore! A, aperiam! Magnam perferendis id alias eligendi fuga debitis. Qui saepe sed atque cum, sunt. Ad reprehenderit beatae ducimus ab necessitatibus ex sequi, excepturi dolore veritatis officiis, minus provident nisi magni.</p>		
+				</div>
+			</div>			
+
+		</main>
+
+		<footer class="footer">
+		
+		</footer>
+
+
+	</section>
+<script src="play_nav.js"></script>
+<script>
+	// define all the variables here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+var displayToggle = document.querySelector(".display-toggle");
+var clearToggle = document.querySelector(".clear-toggle");
+var nav = document.querySelector(".nav");
+var navList = document.querySelectorAll(".nav a");
+var logo = document.querySelector(".logo");
+var l1 = document.querySelector(".l1");
+var l2 = document.querySelector(".l2");
+var arrowLeft = document.querySelector(".arrow-left");
+var arrowRight = document.querySelector(".arrow-right");
+var section1 = document.querySelector(".section-1");
+
+// aad all the events here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+displayToggle.addEventListener("click", dtoggle);
+clearToggle.addEventListener("click", ctoggle);
+logo.addEventListener("mouseover", logoin);
+logo.addEventListener("mouseout", logoout);
+arrowLeft.addEventListener("click", arrowL);
+arrowRight.addEventListener("click", arrowR);
+
+
+// functions go here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+function dtoggle(){
+	displayToggle.style.display = "none";
+	clearToggle.style.display = "block";
+	nav.style.cssText = "transform: scale(1,1)";
+	section1.style.cssText = "transform:translateY(250px);transition:transform .5s"
+	for(var i=0; i<navList.length; i++){
+		navList[i].style.opacity ="1";
+	}
+		
+}
+
+function ctoggle(){
+	displayToggle.style.display = "block";
+	clearToggle.style.display = "none";
+	nav.style.cssText = "transform: scale(1,0);transition:transform .5s";
+	section1.style.cssText = "transition:transform .5s"
+	for(var i=0; i<navList.length; i++){
+		navList[i].style.opacity ="0";
+	}
+}
+
+function logoin(){
+	console.log(1)
+	l1.style.color="#c40";
+	l2.style.color="#d1d1d1";
+}
+function logoout(){
+	l1.style.color="";
+	l2.style.color="";
+}
+
+function arrowL(){
+	nav.style.cssText = "transform:translate(-50%)";
+}
+function arrowR(){
+	nav.style.cssText = "transform:translate(0%)";
+}// define all the variables here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+var displayToggle = document.querySelector(".display-toggle");
+var clearToggle = document.querySelector(".clear-toggle");
+var nav = document.querySelector(".nav");
+var navList = document.querySelectorAll(".nav a");
+var logo = document.querySelector(".logo");
+var l1 = document.querySelector(".l1");
+var l2 = document.querySelector(".l2");
+var arrowLeft = document.querySelector(".arrow-left");
+var arrowRight = document.querySelector(".arrow-right");
+var section1 = document.querySelector(".section-1");
+
+// aad all the events here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+displayToggle.addEventListener("click", dtoggle);
+clearToggle.addEventListener("click", ctoggle);
+logo.addEventListener("mouseover", logoin);
+logo.addEventListener("mouseout", logoout);
+arrowLeft.addEventListener("click", arrowL);
+arrowRight.addEventListener("click", arrowR);
+
+
+// functions go here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+function dtoggle(){
+	displayToggle.style.display = "none";
+	clearToggle.style.display = "block";
+	nav.style.cssText = "transform: scale(1,1)";
+	section1.style.cssText = "transform:translateY(250px);transition:transform .5s"
+	for(var i=0; i<navList.length; i++){
+		navList[i].style.opacity ="1";
+	}
+		
+}
+
+function ctoggle(){
+	displayToggle.style.display = "block";
+	clearToggle.style.display = "none";
+	nav.style.cssText = "transform: scale(1,0);transition:transform .5s";
+	section1.style.cssText = "transition:transform .5s"
+	for(var i=0; i<navList.length; i++){
+		navList[i].style.opacity ="0";
+	}
+}
+
+function logoin(){
+	console.log(1)
+	l1.style.color="#c40";
+	l2.style.color="#d1d1d1";
+}
+function logoout(){
+	l1.style.color="";
+	l2.style.color="";
+}
+
+function arrowL(){
+	nav.style.cssText = "transform:translate(-50%)";
+}
+function arrowR(){
+	nav.style.cssText = "transform:translate(0%)";
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

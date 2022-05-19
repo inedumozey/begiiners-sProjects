@@ -1,0 +1,844 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cl",
+				"classList"
+			],
+			[
+				"tr",
+				"transition\tproperty"
+			],
+			[
+				"tra",
+				"transition\tproperty"
+			],
+			[
+				"tran",
+				"transform\tproperty"
+			],
+			[
+				"text-de",
+				"text-decoration-style\tproperty"
+			],
+			[
+				"i",
+				"italic\tfont-style"
+			],
+			[
+				"p",
+				"parentElement"
+			],
+			[
+				"lo",
+				"localStorage"
+			],
+			[
+				"get",
+				"getItem"
+			],
+			[
+				"c",
+				"childNodes"
+			],
+			[
+				"trans",
+				"translateX"
+			],
+			[
+				"slid",
+				"slide_index"
+			],
+			[
+				"sli",
+				"slideIndex"
+			],
+			[
+				"next",
+				"nextArrow"
+			],
+			[
+				"sle",
+				"slides"
+			],
+			[
+				"slide",
+				"slides"
+			],
+			[
+				"time",
+				"timeId"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"arr",
+				"arrows"
+			],
+			[
+				"a",
+				"arrow"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
+			],
+			[
+				"dot",
+				"dotBtn"
+			],
+			[
+				"do",
+				"dotBtn"
+			],
+			[
+				"fi",
+				"firstClone"
+			],
+			[
+				"las",
+				"lastLastIndex"
+			],
+			[
+				"fir",
+				"first-clone"
+			],
+			[
+				"firs",
+				"firstClone"
+			],
+			[
+				"f",
+				"firstClone"
+			],
+			[
+				"st",
+				"startIndex"
+			],
+			[
+				"obj",
+				"object-position\tproperty"
+			],
+			[
+				"object",
+				"object-fit\tproperty"
+			],
+			[
+				"bac",
+				"background\tproperty"
+			],
+			[
+				"po",
+				"pointer\tcursor"
+			],
+			[
+				"trasn",
+				"transform\tproperty"
+			],
+			[
+				"bo",
+				"border\tproperty"
+			],
+			[
+				"over",
+				"overflow\tproperty"
+			],
+			[
+				"off",
+				"offsetWidth"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"color",
+				"colorArr"
+			],
+			[
+				"colo",
+				"colorArr"
+			],
+			[
+				"ov",
+				"overflow-y\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"font",
+				"font-family\tproperty"
+			],
+			[
+				"box-s",
+				"box-sizing\tproperty"
+			],
+			[
+				"o",
+				"offsetWidth"
+			],
+			[
+				"overflo",
+				"overflow-x\tproperty"
+			],
+			[
+				"circl",
+				"circleArr"
+			],
+			[
+				"d",
+				"draw"
+			],
+			[
+				"ca",
+				"canvasWrapper"
+			],
+			[
+				"inn",
+				"innerWidth"
+			],
+			[
+				"ovwe",
+				"overflow-x\tproperty"
+			],
+			[
+				"b",
+				"beginPath"
+			],
+			[
+				"stroke",
+				"strokeStyle"
+			],
+			[
+				"l",
+				"lineTo"
+			],
+			[
+				"n",
+				"initial\tcursor"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"font-",
+				"font-size\tproperty"
+			],
+			[
+				"word",
+				"word-break\tproperty"
+			],
+			[
+				"fl",
+				"flex-start\talign-items"
+			],
+			[
+				"bor",
+				"border-radius\tproperty"
+			],
+			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"fon",
+				"font-family\tproperty"
+			],
+			[
+				"ob",
+				"obj"
+			],
+			[
+				"t",
+				"toUpperCase"
+			],
+			[
+				"font-st",
+				"font-style\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"border",
+				"border-radius\tproperty"
+			],
+			[
+				"tras",
+				"transform\tproperty"
+			],
+			[
+				"con",
+				"constraints"
+			],
+			[
+				"marg",
+				"margin\tproperty"
+			],
+			[
+				"width",
+				"min-width\tproperty"
+			],
+			[
+				"ge",
+				"getName"
+			],
+			[
+				"perso",
+				"person1"
+			],
+			[
+				"OBJ",
+				"obj"
+			],
+			[
+				"first",
+				"firstName"
+			],
+			[
+				"gr",
+				"grid-gap\tproperty"
+			],
+			[
+				"filter",
+				"filterArr"
+			],
+			[
+				"al",
+				"align-self\tproperty"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"sp",
+				"space-between\tjustify-content"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"alig",
+				"align-items\tproperty"
+			],
+			[
+				"background",
+				"background-repeat\tproperty"
+			],
+			[
+				"page",
+				"pageDelBtn"
+			],
+			[
+				"del",
+				"delBtn"
+			],
+			[
+				"full",
+				"fullPageText"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"de",
+				"delBtn"
+			],
+			[
+				"pag",
+				"pageDelBtn"
+			],
+			[
+				"pa",
+				"pageDelBtn"
+			],
+			[
+				"wo",
+				"word-break\tproperty"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"te",
+				"textDiv"
+			],
+			[
+				"res",
+				"resultDiv"
+			],
+			[
+				"append",
+				"appendChild"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"app",
+				"appendChild"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"span",
+				"spanForResult"
+			],
+			[
+				"rse",
+				"resultMore"
+			],
+			[
+				"result",
+				"resultMore"
+			],
+			[
+				"evet",
+				"addEventListener"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"rg",
+				"rgba()\tbackground"
+			],
+			[
+				"marin",
+				"margin-left\tproperty"
+			],
+			[
+				"r",
+				"r\tright"
+			],
+			[
+				"flex",
+				"flex-grow\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"fo",
+				"font-size\tproperty"
+			],
+			[
+				"align",
+				"align-self\tproperty"
+			],
+			[
+				"li",
+				"line-height\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"inli",
+				"inline-block\tdisplay"
+			],
+			[
+				"z",
+				"z-index\tproperty"
+			],
+			[
+				"space",
+				"space-between\tjustify-content"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"ta",
+				"tableLength"
+			],
+			[
+				"dele",
+				"deletCell"
+			],
+			[
+				"wor",
+				"word-wrap\tproperty"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"nam",
+				"nameInput"
+			],
+			[
+				"name",
+				"nameInput"
+			],
+			[
+				"hei",
+				"height\tproperty"
+			],
+			[
+				"op",
+				"opacity\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Build: Cancel"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: sass",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Add Channel"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"plug",
+				"Package Control: Upgrade Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 414.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Mozey/Desktop/Todo List/phoneTodo.html",
+		"/C/Users/Mozey/Desktop/Todo List/todo.js",
+		"/C/Users/Mozey/Desktop/Todo List/todo.css",
+		"/C/Users/Mozey/Desktop/Todo List/todo.html",
+		"/C/Users/Mozey/Desktop/index.html",
+		"/C/Users/Mozey/Desktop/Image Slider/iindex.html",
+		"/C/Users/Mozey/Desktop/Image Slider/iindex.js",
+		"/C/Users/Mozey/Desktop/Image Slider/slide.html",
+		"/C/Users/Mozey/Desktop/Image Slider/SlideShow.html",
+		"/C/Users/Mozey/Desktop/UNIJOS/Welcome to University of Jos _ University of Jos_files/carousel.js.download",
+		"/C/Users/Mozey/Desktop/UNIJOS/Welcome to University of Jos _ University of Jos_files/jssor.slider.js.download",
+		"/C/Users/Mozey/Desktop/Image Slider/slide.js",
+		"/C/Users/Mozey/Desktop/New folder/slide.html",
+		"/C/Users/Mozey/Desktop/Cart/index.html",
+		"/C/Users/Mozey/Desktop/Cart/index.js",
+		"/C/Users/Mozey/Desktop/Web_Moses/PROJECTS/Pocket Note Book App/note.html",
+		"/C/Users/Mozey/Desktop/WATER SOLUBLE VITAMIN.docx",
+		"/C/Users/Mozey/Desktop/Web_Moses/PROJECTS/Lodo Game/lodo.html",
+		"/C/Users/Mozey/Desktop/Web_Moses/PROJECTS/Lodo Game/lodo.css",
+		"/C/Users/Mozey/Desktop/XML/test.xml",
+		"/C/Users/Mozey/Desktop/XML/test.dtd",
+		"/C/Users/Mozey/Desktop/Web_Moses/PROJECTS/Lodo Game/lodo.js",
+		"/C/Users/Mozey/Desktop/test.dtd",
+		"/C/Users/Mozey/Desktop/test.xml",
+		"/C/Users/Mozey/Desktop/Web_Moses/PROJECTS/Canvas/intro.html",
+		"/C/Users/Mozey/Desktop/Web_Moses/PROJECTS/Canvas/intro.js",
+		"/C/Users/Mozey/Desktop/budget app/budget.js",
+		"/C/Users/Mozey/Desktop/budget app/budget.css",
+		"/C/Users/Mozey/Desktop/budget app/budget.html",
+		"/C/Users/Mozey/Desktop/Canvas/intro.html",
+		"/C/Users/Mozey/Desktop/Canvas/play.html",
+		"/C/Users/Mozey/Desktop/Canvas/intro.js",
+		"/C/Users/Mozey/Desktop/Canvas/play.js",
+		"/C/Users/Mozey/Desktop/Password Generator/passwordGenerator.js",
+		"/C/Users/Mozey/Desktop/passwordGenerator.html",
+		"/C/Users/Mozey/Desktop/Password Generator/passwordGenerator.css",
+		"/C/Users/Mozey/Desktop/Password Generator/passwordGenerator.html",
+		"/C/Users/Mozey/Desktop/javaScript/index.html",
+		"/C/Users/Mozey/Desktop/javaScript/index.js",
+		"/C/Users/Mozey/Desktop/Lodo Game/lodo.css",
+		"/C/Users/Mozey/Desktop/Lodo Game/lodo.html",
+		"/C/Users/Mozey/Desktop/Enenche/Enenche.html",
+		"/C/Users/Mozey/Desktop/Enenche.html",
+		"/C/Users/Mozey/Desktop/lodoGame/lodo.html",
+		"/C/Users/Mozey/Desktop/javaScript/hey.js",
+		"/C/Users/Mozey/Desktop/dex.html",
+		"/C/Users/Mozey/Desktop/New Project/new.js",
+		"/C/Users/Mozey/Desktop/play_nav/play_nav.js",
+		"/C/Users/Mozey/Desktop/play_nav/play_nav.html",
+		"/C/Users/Mozey/Desktop/note.html",
+		"/C/Users/Mozey/Desktop/hey.js",
+		"/C/Users/Mozey/Desktop/MyNodeApp/server.js",
+		"/C/Users/Mozey/Desktop/play_nav/ggs.html",
+		"/C/Users/Mozey/Desktop/javaScript/loop.js",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/website.js",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/website.css",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/website.html",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/Animations/Load.html",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/Animations/fast cheap.html",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/CSS CHECKBOXES/nav-project/nav.html",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/English/Cybertruck.html",
+		"/C/Users/Mozey/Desktop/Pocket Note Book App/note.css",
+		"/C/Users/Mozey/Desktop/Pocket Note Book App/note.html",
+		"/C/Users/Mozey/Desktop/Pocket Note Book App/note.js",
+		"/C/Users/Mozey/Documents/Web_Moses/Js/DOM/item list/dom.js",
+		"/C/Users/Mozey/Desktop/ellipsis.html",
+		"/C/Users/Mozey/Desktop/animation/anim.css",
+		"/C/ruby/example of sass.html",
+		"/C/Users/Mozey/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/C/Users/Mozey/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/ruby/lib/sass/style.scss",
+		"/C/Users/Mozey/Desktop/scout-app-0.7.1-win (1)/Scout-Installer/javascripts/app/application.js",
+		"/C/ruby/style.css",
+		"/C/Users/Mozey/Desktop/scout-app-0.7.1-win (1)/Scout-Installer/SpecRunner.html",
+		"/C/ruby/index.html",
+		"/C/web/helo.rb",
+		"/C/Users/Mozey/Desktop/analog.html",
+		"/C/Users/Mozey/Desktop/New folder/dogs.css",
+		"/C/Users/Mozey/Desktop/New folder/dogs.html",
+		"/C/Users/Mozey/Desktop/js play/play.js",
+		"/C/Users/Mozey/Desktop/project/project.html",
+		"/C/Users/Mozey/Desktop/project/project.css",
+		"/C/Users/Mozey/Desktop/New folder/hj.html",
+		"/C/Users/Mozey/Desktop/js play/play.html",
+		"/C/Users/Mozey/Desktop/Web_Moses/Js/DOM/dom.js",
+		"/C/Users/Mozey/Desktop/Web_Moses/Js/DOM/dom.html",
+		"/C/Users/Mozey/Desktop/Web_Moses/Js/DOM/dom.css",
+		"/C/Users/Mozey/Desktop/tb.html",
+		"/C/Users/Mozey/Desktop/jstable/tb.js",
+		"/C/Users/Mozey/Desktop/jstable/tb.html",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/js/Toggle menu/tg.html",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/js/Toggle menu/tg.css",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/js/Toggle menu/tg.js",
+		"/C/Users/Mozey/Desktop/Reg-form/form.js",
+		"/C/Users/Mozey/Desktop/Reg-form/form.css",
+		"/C/Users/Mozey/Desktop/Reg-form/form.html",
+		"/C/Users/Mozey/Documents/Web_Moses/menumenu/menu.js",
+		"/C/Users/Mozey/Documents/Web_Moses/Navbar/nav.js",
+		"/C/Users/Mozey/Documents/Web_Moses/menumenu-2/menu.js",
+		"/C/Users/Mozey/Documents/Web_Moses/js play/play.js",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/FORM/form.html",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/FORM/form.css",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/FORM/cancelled.css",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/FORM/cancelled.html",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/FORM/submit.html",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/FORM/submit.css",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/nav-project/nav.html",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/nav-project/nav.css",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/Hamburger.html",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/switches/switch1.css",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/switches/switch1.html",
+		"/C/Users/Mozey/Documents/Web_Moses/Form/registration_form_all.html",
+		"/C/Users/Mozey/Documents/Web_Moses/Form/registration_form.css",
+		"/C/Users/Mozey/Documents/Web_Moses/Form/registration_form.js",
+		"/C/Users/Mozey/Documents/Web_Moses/Form/registration_form.html",
+		"/C/Users/Mozey/Desktop/animation/anim.html",
+		"/C/Users/Mozey/Desktop/animation/anim.js",
+		"/C/Users/Mozey/Documents/Web_Moses/OCHE/WEB/Dripper.html",
+		"/C/Users/Mozey/Desktop/play-nav phone with meta/accordion_nav.html",
+		"/C/Users/Mozey/Desktop/play_nav/play_nav.css",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/switches/switch.html",
+		"/C/Users/Mozey/Desktop/CSS CHECKBOXES/switches/switch.css",
+		"/C/Users/Mozey/Desktop/accordion_nav.html",
+		"/C/Users/Mozey/Desktop/play-nav phone with meta/play_nav.html",
+		"/C/Users/Mozey/Desktop/play-nav phone/play_nav.html",
+		"/C/Users/Mozey/Desktop/Karisa/play_nav.html",
+		"/C/Users/Mozey/Desktop/switch.html",
+		"/C/Users/Mozey/Desktop/switch.css"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 619.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 209.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "todo.sublime-project",
+	"replace":
+	{
+		"height": 414.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 616.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

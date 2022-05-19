@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="app_range.css">
+	<link rel="stylesheet" href="skin.css">
+	<link rel="stylesheet" href="songlist.css">
+	<link rel="stylesheet" href="now_playing.css">
+
+	<script src="home.js" defer></script>
+	<script src="skin.js" defer></script>
+	<script src="songlist.js" defer></script>
+	<script src="now_playing.js" defer></script>
+	<title>Musci App</title>
+	<script src="https://kit.fontawesome.com/bc9d65927f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- screen image -->
+		<img class="wrapper_img" alt="">
+
+		<!-- home -->
+		<div class="home">
+			<div class="header">
+				<div class="header_title">Music</div>
+				<div class="icons search"><i class="fa fa-search"></i></div>
+			</div>
+			<div class="body">
+				<div class="body_top music_icon">
+					<div class="row1">
+						<div class="row_music_icon all_songs">
+							<div class="draw_icon color1"><i class="fa fa-music"></i></div>
+							<small class="label">All Songs</small>
+						</div>
+						<div class="row_music_icon folders">
+							<div class="draw_icon color2"><i class="fa fa-folder-open"></i></div>
+							<small class="label">Folders</small>
+						</div>
+						<div class="row_music_icon my_favorite">
+							<div class="draw_icon color3"><i class="fa fa-heart"></i></div>
+							<small class="label">My Favorite</small>
+						</div>
+					</div>
+					<!-- <i class="fas fa-headphones-alt"></i> -->
+					<div class="row2">
+						<div class="row_music_icon e_sound">
+							<div class="draw_icon color4"><i class="fas fa-wave-square"></i></div>
+							<small class="label">E-Sound</small>
+						</div>
+						<div class="row_music_icon skin_icon">
+							<div class="draw_icon color5"><i class="fa fa-tshirt"></i></div>
+							<small class="label">Skin</small>
+						</div>
+						<div class="row_music_icon settings">
+							<div class="draw_icon color6"><i class="fa fa-cog"></i></div>
+							<small class="label">Settings</small>
+						</div>
+					</div>
+				</div>
+				<div class="body_bottom myMusic">
+					 <div class="hor_bar"></div>
+					 <div class="my_music_text">My music</div>
+					 <label class="create_new_song_bar" for="music_file">
+				 		<span for="music_file" class="create_new_song_icon">&plus;</span>
+				 		<span for="music_file" class="create_new_song_text">Create new song list</span>
+					 </label>
+					 <input type="file" name="" id="music_file" accept="audio/*" multiple>
+					 <div class="error_text"></div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="view_full">
+					<div class="icons full_scr_icon"><i class="fas fa-headphones-alt"></i></div>
+					<div class="musicName">Lucky_Dube1.mp3</div>
+				</div>
+				<div class="music_control">
+					<div class="icons play_pause">
+						<div class="icons play_icon"><i class="fas fa-play"></i></div>
+						<div class="icons paused_icon"><i class="fas fa-pause"></i></div>
+					</div>
+					<div class="icons next_icon"><i class="fas fa-step-forward"></i></div>
+					<div class="icons toggle_icon"><i class="fas fa-bars"></i></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Skin -->
+		<div class="skin">
+			<div class="header">
+				<div class="header_arrow arrow_left"><i class="fas fa-arrow-left"></i></div>
+				<div class="header_title_skin">Skin</div>
+			</div>
+			<div class="body">
+				<div class="body_top skin_image">
+					<div class="image_upload_btn_div">
+						<label class="upload_img" for="upload_img"><i class="far fa-image"></i></label>
+						<input type="file" accept="image/*" id="upload_img">
+					</div>
+					<div class="my_skin_text"><div>My Skin</div></div>
+					<small class="error_text"></small>
+					</div>
+				<div class="body_bottom skin_color">
+					<div class="color_wrapper">
+						<button class="remove_image">Remove Image</button>
+						<div class="color">
+							<label class="red" for="red">Red</label>
+							<input type="range" max="255" min="0" value="0" id="red">
+						</div>
+						<div class="color">
+							<label class="green" for="green">Green</label>
+							<input type="range" max="255" min="0" value="0" id="green">
+						</div>
+						<div class="color">
+							<label class="blue" for="blue">Blue</label>
+							<input type="range" max="255" min="0" value="0" id="blue">
+						</div>
+						<div class="color">
+							<label class="alpha" for="alpha">Alpha</label>
+							<input type="range" max="1" min="0" step=".001" value="0" id="alpha">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!-- song list -->
+		<div class="songlist">
+			<div class="header">
+				<div class="header_top">
+					<div class="header_arrow arrow_left"><i class="fas fa-arrow-left"></i></div>
+					<div class="header_title">All Songs</div>
+					<div class="icons search"><i class="fa fa-search"></i></div>
+					<div class="icons scan_icon"><i class="fas fa-cheese"></i></div>
+				</div>
+				<div class="header_bottom">
+					<div class="song_text">Song</div>
+					<div class="cover_text">Cover</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="song_area">
+					<div class="song_area_div song_area1">
+						<div class="song_panel">
+							<!-- <div class="songsDiv">
+								<div class="animation">
+									<div class="draw_animation">anime</div>
+								</div>
+								<div class="song">
+									<audio src="" class="audio"></audio>
+									<div class="music_name">Lorem ipsum dolor sit, amet consectetur adipisicing elit</div>
+								</div>
+								<div class="song_info">
+									<div class="icons toggle_icon">
+										<span class="draw_line left_toggle"></span>
+										<span class="draw_line middle_toggle"></span>
+										<span class="draw_line right_toggle"></span>
+									</div>
+								</div>
+							</div>			 -->			
+						</div>
+					</div>
+					<div class="song_area_div song_area2"></div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="view_full">
+					<div class="icons full_scr_icon"><i class="fas fa-headphones-alt"></i></div>
+					<div class="musicName">Lucky_Dube2.mp3</div>
+				</div>
+				<div class="music_control">
+					<div class="icons play_pause">
+						<div class="icons play_icon"><i class="fas fa-play"></i></div>
+						<div class="icons paused_icon"><i class="fas fa-pause"></i></div>
+					</div>
+					<div class="icons next_icon"><i class="fas fa-step-forward"></i></div>
+					<div class="icons toggle_icon"><i class="fas fa-bars"></i></div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- now playing -->
+		<div class="now_playing">
+			<div class="header">
+				<div class="header_top">
+					<div class="header_arrow arrow_down"><i class="fas fa-arrow-down"></i></div>
+					<div class="header_title music_name">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+				</div>
+				<div class="header_bottom">
+					<div class="icons header_earphone">
+						<i class="fas fa-headphones-alt"></i><span>&nbsp; &nbsp; &nbsp;|</span>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="now_playing_showcase">
+					<div class="icons"><i class="fal fa-music"></i></div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="now_playing_footer_info share_div">
+					<div class="share_star">
+						<div class="icons star_icon"><i class="far fa-star"></i></div>
+						<div class="icons share_icon"><i class="fas fa-share-alt"></i></div>
+					</div>
+				</div>
+				<div class="now_playing_footer_info progressbar_div">
+					<div class="point_progress_div">
+						<span class="draw_line left"></span>
+						<span class="draw_line middle"></span>
+						<span class="draw_line right"></span>
+					</div>
+					<div class="time_progress_div">
+						<div class="time current_time">20:0:09</div>
+						<div class="progress_bar">
+							<input type="range" max="100" min="0" value="0" class="now_playing_progress_bar" id="">
+						</div>
+						<div class="time total_duration">22:35:37</div>
+					</div>
+				</div>
+				<div class="now_playing_footer_info control_div">
+					<div class="icons shuffle_single">
+						<div class="icons shuffle_icon"><i class="fas fa-step-forward"></i></div>
+						<div class="icons single_icon"><i class="fas fa-step-forward"></i></div>
+					</div>
+					<div class="icons rewind_icon"><i class="fas fa-step-forward"></i></div>
+					<div class="icons play_pause big_icon">
+						<div class="icons play_icon big_icon"><i class="fas fa-play"></i></div>
+						<div class="icons paused_icon big_icon"><i class="fas fa-pause"></i></div>
+					</div>
+					<div class="icons next_icon"><i class="fas fa-step-forward"></i></div>
+					<div class="icons toggle_icon">
+						<span class="draw_line left_toggle"></span>
+						<span class="draw_line middle_toggle"></span>
+						<span class="draw_line right_toggle"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</body>
+</html>

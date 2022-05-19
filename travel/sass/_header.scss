@@ -1,0 +1,20 @@
+@mixin flexCenter($direction $bg) {
+    display: flex;  
+    flex-flow: column;
+    justify-content: center;
+    align-items:center;
+    flex-direction: $direction;
+    background:$bg;
+}
+
+header{
+    @include flexCenter(column, red);
+
+    button{
+        background: $primaryBtn;
+        margin-bottom:10px;
+        &:hover{
+            background: red;;
+        }
+    }
+}

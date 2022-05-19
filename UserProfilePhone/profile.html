@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="profile.css">
+	<script src="profile.js" defer></script>
+	<title>User Profile</title>
+</head>
+<body>
+	<div class="user_main_container">
+		<div class="wrapper create_account_wrapper">
+			<div class="welcome">
+				<h1>Welcome!</h1>
+				<p>We are your plugs!</p>
+			</div>
+			<div class="user_in_div">
+				<button class="user_btn login_In">Login</button>
+				<button class="user_btn sign_up">Sign Up</button>
+			</div>
+		</div>
+
+		<div class="wrapper log_in_input">
+			<div class="log_in_input_title"><h3>Login</h3></div>
+			<label for="login_input">Phone Number:</label>
+			<input type="text" id="login_input" name="" placeholder="enter your mobile contact (not the compulsary one)">
+			<div class="user_log_div">
+				<button class="user_btn backTocreate_account_wrapper_btn">&lt;&lt;&lt;</button>
+				<button class="user_btn log_in">Login</button>
+			</div>
+		</div>
+
+		<div class="wrapper User_wrapper_page_1">
+			<div class="headerTitle">
+				<h1>Create User Profile</h1>
+				<p>Lorem ipsum, dolor sit amet, consectetur</p>
+			</div>
+			<div class="input_div">
+				<label for="fname">First Name:<span class="error fnameError">*</span></label>
+				<input id="fname" type="text" class="width_100">
+			</div>
+			<div class="input_div">
+				<label for="lname">Last Name:<span class="error lnameError">*</span></label>
+				<input id="lname" type="text" class="width_100">
+			</div>
+			<div class="input_div flex">
+				<div class="sub_input_div age_height">
+					<label for="age">Date of Birth:<span class="error ageError">*</span></label>
+					<input type="date" id="age">
+				</div>
+				<div class="sub_input_div gender_div">
+					<div class="male_div">
+						<label for="male">Male:</label>
+						<input name="gender" type="radio" id="male">
+					</div>
+					<div class="female_div">
+						<label for="female">Female:</label>
+						<input name="gender" type="radio" id="female">
+					</div>
+					<div class="other_div">
+						<label for="other">Other:</label>
+						<input name="gender" type="radio" id="other">
+					</div>
+					<div class="genderError"></div>
+				</div>
+				<div class="sub_input_div age_height">
+					<label for="height">Height:<span class="error heightError">*</span></label>
+					<input type="text" id="height">
+				</div>
+			</div>
+			<div class="input_div flex">
+				<div class="sub_input_div">
+					<label for="phone_1">Mobile Number 1:<span class="error numberError">*</span></label>
+					<input type="text" id="phone_1">
+				</div>
+				<div class="sub_input_div">
+					<label for="phone_2">Mobile Number 2: (Optional)</label>
+					<input type="text" id="phone_2">
+				</div>
+			</div>
+			<div class="next_backToUser_btn">
+				<button class="prev_submit backToUser_btn">&lt;&lt;&lt;</button>
+				<button class="prev_submit next_btn">&gt;&gt;&gt;</button>
+			</div>
+
+		</div>
+		<div class="wrapper User_wrapper_page_2">
+			<div class="input_div flex">
+				<div class="sub_input_div">
+					<label for="country">Country:<span class="error countryError">*</span></label>
+					<select id="country">
+						<option value="empty">- - Select Country - -</option>
+						<option value="Congo">Congo</option>
+						<option value="Ghana">Ghana</option>
+						<option value="Nigeria">Nigeria</option>
+						<option value="Zimbabwe">Zimbabwe</option>
+						<option value="USA">USA</option>
+					</select>
+				</div>
+				<div class="sub_input_div state_div"></div>
+			</div>
+			<div class="input_div">
+				<label for="bio">Bio: (Optional)</label>
+				<textarea name="bio" id="bio" cols="44.5" rows="7" maxlength="300" placeholder="Write not more than 200 text characters about yourself"></textarea>
+			</div>
+			<div class="passport_div">
+				<div class="choose_file_box">
+					<input id="image_input" type="file">
+				</div>
+				<div class="image_wrapper"></div>
+			</div>
+			<div class="prev_submit_btn">
+				<button class="prev_submit previous_btn">&lt;&lt;&lt;</button>
+				<button class="prev_submit submit_btn">Submit</button>
+			</div>
+		</div>
+		<div class="user_dashboard">
+			<div class="profile_back_btn">
+				<button class="prev_submit userBtn">&lt;&lt;&lt;</button>
+				<button class="prev_submit view">View Your Profile</button>
+			</div>
+			<div class="userNotice">Hover on the panel to view dashboard</div>
+			<div class="userPanel">
+				<div class="image_wrapper view_image">
+					<img class="img passport" alt="">
+				</div>
+				<table class="userTable">
+					<tr>
+						<td>First Name:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Last Name:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Date of Birth:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Gender:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Height:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mobile Contact 1:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Mobile Contact 2:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Country:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>State:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Bio:</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

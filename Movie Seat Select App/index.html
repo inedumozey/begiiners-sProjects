@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="index.js" defer></script>
+	<title>Movie Seat Booking App</title>
+</head>
+<body>
+	<div class=" movie_wrapper">
+		<div class="title">
+			<h1>Latest Movie Cycle</h1>
+		</div>
+		<div class="movie_container">
+			<label>Select a Movie:</label>
+			<select id="movies">
+				<option value="400">Merry Men (N400)</option>
+				<option value="450">Chief Daddy (N450)</option>
+				<option value="500">Lion (N500)</option>
+				<option value="300">King of Boys (N300)</option>
+				<option value="500">Kick off (N500)</option>
+			</select>
+		</div>
+		<div class="showcas_container">
+			<ul>
+				<li>
+					<div class="seat"></div>
+					<small>N/A</small>
+				</li>
+				<li>
+					<div class="seat selected"></div>
+					<small>Selected</small>
+				</li>
+				<li>
+					<div class="seat occupied"></div>
+					<small>Occupied</small>
+				</li>
+			</ul>
+		</div>
+		<hr>
+		<hr>
+		<div class="screen_container">
+			<div class="screen"></div>
+		</div>
+		<div class="seat_container">
+			<div class="seat_wrapper">
+				<div class="row">
+					<div class="seat">1</div>
+					<div class="seat">2</div>
+					<div class="seat">3</div>
+					<div class="seat">4</div>
+					<div class="seat">5</div>
+					<div class="seat">6</div>
+					<div class="seat">7</div>
+					<div class="seat">8</div>
+					<div class="seat">9</div>
+					<div class="seat">10</div>
+					<div class="seat">11</div>
+					<div class="seat">12</div>
+				</div>
+				<div class="row">
+					<div class="seat">13</div>
+					<div class="seat">14</div>
+					<div class="seat">15</div>
+					<div class="seat">16</div>
+					<div class="seat">17</div>
+					<div class="seat">18</div>
+					<div class="seat">19</div>
+					<div class="seat">20</div>
+					<div class="seat">21</div>
+					<div class="seat">22</div>
+					<div class="seat">23</div>
+					<div class="seat">24</div>
+				</div>
+				<div class="row">
+					<div class="seat">25</div>
+					<div class="seat">26</div>
+					<div class="seat">27</div>
+					<div class="seat">28</div>
+					<div class="seat">29</div>
+					<div class="seat">30</div>
+					<div class="seat">31</div>
+					<div class="seat">32</div>
+					<div class="seat">33</div>
+					<div class="seat">34</div>
+					<div class="seat">35</div>
+					<div class="seat">36</div>
+				</div>
+				<div class="row">
+					<div class="seat">37</div>
+					<div class="seat">38</div>
+					<div class="seat">39</div>
+					<div class="seat">40</div>
+					<div class="seat">41</div>
+					<div class="seat">42</div>
+					<div class="seat">43</div>
+					<div class="seat">44</div>
+					<div class="seat">45</div>
+					<div class="seat">46</div>
+					<div class="seat">47</div>
+					<div class="seat">48</div>
+				</div>
+				<div class="row">
+					<div class="seat">49</div>
+					<div class="seat">50</div>
+					<div class="seat">51</div>
+					<div class="seat">52</div>
+					<div class="seat">53</div>
+					<div class="seat">54</div>
+					<div class="seat">55</div>
+					<div class="seat">56</div>
+					<div class="seat">57</div>
+					<div class="seat">58</div>
+					<div class="seat">59</div>
+					<div class="seat">60</div>
+				</div>
+				<div class="row">
+					<div class="seat">61</div>
+					<div class="seat">62</div>
+					<div class="seat">63</div>
+					<div class="seat">64</div>
+					<div class="seat">65</div>
+					<div class="seat">66</div>
+					<div class="seat">67</div>
+					<div class="seat">68</div>
+					<div class="seat">69</div>
+					<div class="seat">70</div>
+					<div class="seat">71</div>
+					<div class="seat">72</div>
+				</div>
+			</div>
+		</div>
+		<div class="summary">You have Selected <span class="count">0</span> <span class="add_s">Seat</span> for a total Price of N<span class="price">0</span> </div>
+		<button onclick="submit()" class="submit">Submit</button>
+	</div>
+	<div class="receipt">
+		<div class="border_outer">
+			<div class="border_inner">
+				<div class="title_r">Movie Ticket</div>
+				<small>Name.......... <span class="username">Mozey</span></small><br>
+				<small>Movie Name.......... <span class="movie_title">Merry Men</span></small><br>
+				<small>Seat(s) Selected.......... <span class="seats_selected">3</span></small><br>
+				<small>Total Price.......... <span>N<span class="total_movie_price">5600</span></span></small>
+			</div>
+		</div>
+		<button onclick="back()" class="back">Back</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="analog.css">
+   <title>Greeting</title>
+
+   <style type="text/css">
+   	*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+body{
+	background: #000;
+			width:100%;
+			height: 100vh;
+			overflow-x: hidden;
+}
+
+.container{
+	
+	min-width:100%;
+	min-height:95vh;
+	padding:10px;
+	background-color: #141e30;
+	background: linear-gradient(to right, #24243e, #141e30, #0f0c29);
+
+}
+	.box1{
+	width:100px;
+	height:100px;
+	background:pink;
+	position: absolute;
+	top:20px;
+	left:70px;
+	border-radius: 250px 60px 100px 60px;
+	filter:blur(30px);
+}
+.box2{
+	width:100px;
+	height:100px;
+	background:pink;
+	position: absolute;
+	top:20px;
+	right:70px;
+	border-radius: 250px 60px 100px 60px;
+	transform: rotate(90deg);
+	filter:blur(30px);
+}
+.box3{
+	width:100px;
+	height:100px;
+	background:pink;
+	position: absolute;
+	bottom:260px;
+	left:70px;
+	border-radius: 250px 60px 100px 60px;
+	transform: rotate(270deg);
+	filter:blur(30px);
+}
+.box4{
+	width:100px;
+	height:100px;
+	background:pink;
+	position: absolute;
+	bottom:260px;
+	right:70px;
+	border-radius: 250px 60px 100px 60px;
+	transform: rotate(180deg);
+	filter:blur(30px);
+	
+}
+
+.outer{
+	margin: 0 auto;
+	width:300px;
+	height: 300px;
+	box-shadow: inset -3px -3px 2px #00000070, inset 3px 3px 2px #ffffff70;
+	position: relative;
+	border-radius:100px;
+	font-weight: bold;
+	top:10px;
+
+}
+
+.clock{
+	width:250px;
+	height: 250px;
+	box-shadow: inset -1px -1px #ffffff70, inset 3px 3px #00000007,inset -1px -1px #ffffff70, inset 1px 1px #00000700,inset -3px -3px #ffffff70, inset 3px 3px #00000070,inset -3px -3px #ffffff70, inset 1px 1px #00000070,inset -1px -1px #ffffff70, inset 4px 4px #00000070,inset -4px -4px #ffffff70, inset 4px 4px #00000070,inset -4px -4px #ffffff70, inset 4px 4px #00000070;
+	-webkit-box-shadow: inset -1px -1px #ffffff70, inset 3px 3px #00000007,inset -1px -1px #ffffff70, inset 1px 1px #00000700,inset -3px -3px #ffffff70, inset 3px 3px #00000070,inset -3px -3px #ffffff70, inset 1px 1px #00000070,inset -1px -1px #ffffff70, inset 4px 4px #00000070,inset -4px -4px #ffffff70, inset 4px 4px #00000070,inset -4px -4px #ffffff70, inset 4px 4px #00000070;
+        -moz-box-shadow: inset -1px -1px #ffffff70, inset 3px 3px #00000007,inset -1px -1px #ffffff70, inset 1px 1px #00000700,inset -3px -3px #ffffff70, inset 3px 3px #00000070,inset -3px -3px #ffffff70, inset 1px 1px #00000070,inset -1px -1px #ffffff70, inset 4px 4px #00000070,inset -4px -4px #ffffff70, inset 4px 4px #00000070,inset -4px -4px #ffffff70, inset 4px 4px #00000070;
+	
+
+
+
+position: absolute;
+	border-radius: 50%;
+	font-weight: bold;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+.clock:before{
+	content:"";
+	position: absolute;
+	width:15px;
+	height: 15px;
+	background-color: #141e30;
+	background: linear-gradient(to right, #24243e, #141e30, #0f0c29);
+	border-radius: 50%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	box-shadow: -1px -1px #ffffff70, 1px 1px #00000070,-1px -1px #ffffff70, 1px 1px #00000070,-1px -1px #ffffff70, 1px 1px #00000070;
+	z-index: 1
+}
+
+.period{
+	margin:20px auto;
+	color: white;
+	text-shadow: -1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070;
+	color:gray;
+	font-size: 1.3em;
+	box-shadow: inset -3px -3px 2px #00000070, inset 3px 3px 2px #ffffff70;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+	width: 60%;
+	padding:10px;
+	color:red;
+	border-radius: 29px;
+	text-align: center;
+}
+
+.digital{
+	margin:10px auto;
+	color: white;
+	text-shadow: -1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070;
+	color:gray;
+	font-size: 1.3em;
+	box-shadow: inset -3px -3px 2px #00000070, inset 3px 3px 2px #ffffff70;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+	width: 70%;
+	padding:10px;
+	color:red;
+	border-radius: 29px;
+}
+
+.day{
+	margin:10px auto;
+	text-shadow: -1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070;
+	color:teal;
+	font-size: 1.3em;
+	text-align:center;
+	box-shadow: inset -3px -3px 2px #00000070, inset 3px 3px 2px #ffffff70;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+	width: 80%;
+	padding:10px;
+	color:red;
+	border-radius: 29px;		
+}
+
+.date{
+	margin:0 auto 10px auto;
+	text-shadow: -1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070;
+	color:teal;
+	font-size: 1.3em;
+	text-align:center;
+	box-shadow: inset -3px -3px 2px #00000070, inset 3px 3px 2px #ffffff70;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+	width: 90%;
+	padding:10px;
+	color:red;
+	border-radius: 29px;	
+}
+
+
+.hand{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+}
+.h{
+	position: absolute;
+	bottom:50%;
+	left:50%;
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	border-radius: 100% 100% 0 0;
+	box-shadow: inset -3px -3px #00000070, inset 3px 3px #ffffff70;
+}
+.hh{
+	width:6px;
+	height: 50px;
+	background: #fff;
+	transform: rotate(300deg);
+}
+.mh{
+	width:4px;
+	height: 75px;
+	background:#fff;
+	transform: rotate(140deg);
+}
+.sh{
+	width:2px;
+	height: 90px;
+	background: red;
+	transform: rotate(30deg);
+}
+.num{
+	padding:15px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-shadow: -1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070,-1px -1px 2px #ffffff70, 1px 1px 2px #00000070;
+}
+.num1{
+	transform: rotate(30deg);
+}
+.num1 div{
+	transform: rotate(-30deg);
+}
+.num2{
+	transform: rotate(60deg);
+}
+.num2 div{
+	transform: rotate(-60deg);
+}
+.num3{
+	transform: rotate(90deg);
+}
+.num3 div{
+	transform: rotate(-90deg);
+}
+.num4{
+	transform: rotate(120deg);
+}
+.num4 div{
+	transform: rotate(-120deg);
+}
+.num5{
+	transform: rotate(150deg);
+}
+.num5 div{
+	transform: rotate(-150deg);
+}
+.num6{
+	transform: rotate(180deg);
+}
+.num6 div{
+	transform: rotate(-180deg);
+}
+.num7{
+	transform: rotate(210deg);
+}
+.num7 div{
+	transform: rotate(-210deg);
+}
+.num8{
+	transform: rotate(240deg);
+}
+.num8 div{
+	transform: rotate(-240deg);
+}
+.num9{
+	transform: rotate(270deg);
+}
+.num9 div{
+	transform: rotate(-270deg);
+}
+.num10{
+	transform: rotate(300deg);
+}
+.num10 div{
+	transform: rotate(-300deg);
+}
+.num11{
+	transform: rotate(330deg);
+}
+.num11 div{
+	transform: rotate(-330deg);
+}
+
+.dev{
+	font-size: .9em;
+	font-family: cursive;
+	color:gold;
+	font-style: italic;
+position: absolute;
+top:80%;
+left:15px;
+transform:rotate(42deg);
+
+}
+
+   </style>
+</head>
+<body>
+	<div class="container">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+
+
+
+
+		<div class="outer">
+			<div class="dev">Mozey</div>
+			<div class="clock"> <!-- background images change by javaScript depending on the period of the day-->
+				
+				<div class="hand">
+					<div class="h hh"></div>
+					<div class="h mh"></div>
+					<div class="h sh"></div>
+				</div>
+				<div class="num num1">
+					<div>1</div>
+				</div>
+				<div class="num num2">
+					<div>2</div>
+				</div>
+				<div class="num num3">
+					<div>3</div>
+				</div>
+				<div class="num num4">
+					<div>4</div>
+				</div>
+				<div class="num num5">
+					<div>5</div>
+				</div>
+				<div class="num num6">
+					<div>6</div>
+				</div>
+				<div class="num num7">
+					<div>7</div>
+				</div>
+				<div class="num num8">
+					<div>8</div>
+				</div>
+				<div class="num num9">
+					<div>9</div>
+				</div>
+				<div class="num num10">
+					<div>10</div>
+				</div>
+				<div class="num num11">
+					<div>11</div>
+				</div>
+				<div class="num num12">
+					<div>12</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="period"><h5></h5></div> <!-- period of the day changes by javaScript -->
+
+		<div class="digital">
+			<div class="hr"><h5></h5></div>
+			<div class="mn"><h5></h5></div>
+			<div class="sc"><h5></h5></div>
+			<div class="meridian"><h5></h5></div>
+		</div>
+
+		<div class="day">
+			<h5>Thursday</h5>
+		</div>
+		
+		<div class="date">
+			<div class="dy"><h5></h5></div>
+			<div class="mon"><h5></h5></div>
+			<div class="yr"><h5></h5></div>
+		</div>
+	</div>
+<script src="analog.js"></script>
+
+<script type="text/javascript">
+analogClock()
+function analogClock(){
+setInterval(analogClock, 1000);
+
+// getting variables
+let clock = document.querySelector(".clock");
+let hhand = document.querySelector(".hh");
+let mhand = document.querySelector(".mh");
+let shand = document.querySelector(".sh");
+
+	// set current time
+	let d = new Date();
+	let hr = d.getHours();
+	let mn = d.getMinutes();
+	let sc = d.getSeconds();
+
+			// set the position of the hands
+			let hPosition = ((hr*30) + (mn*6)/12);
+			let mPosition = ((mn*6) + (sc*6)/60);
+			let sPosition = (sc*6)
+
+	// set the rotation
+	hhand.style.transform = "rotate(" + hPosition + "deg)";
+	mhand.style.transform = "rotate(" + mPosition + "deg)";
+	shand.style.transform = "rotate(" + sPosition + "deg)";
+
+
+
+			//image background of the clock
+
+			if(hr==0 || hr<6){
+			clock.style.cssText="background:url(images/moonnight.jpg);background-size:cover; background-repeat:no-repeat"
+			}else if(hr==6 || hr<8){
+				clock.style.cssText="background:url(images/sunrises.jpg);background-size:cover; background-repeat:no-repeat"
+			}else if(hr==8 || hr<12){
+				clock.style.cssText="background:url(images/midmorning.jpg);background-size:cover; background-repeat:no-repeat"
+			}else if(hr==12 || hr<16){
+				clock.style.cssText="background:url(images/sunnyday.jpg);background-size:cover; background-repeat:no-repeat"
+			}else if(hr==16 || hr<19){
+				clock.style.cssText="background:url(images/evening.jpg);background-size:cover; background-repeat:no-repeat"
+			}else if(hr==19 || hr<24){
+				clock.style.cssText="background:url(images/night.jpg);background-size:cover; background-repeat:no-repeat"
+			}
+
+
+}
+
+
+
+
+// digital clock
+digitalClock();
+function digitalClock(){
+var t = setTimeout(digitalClock, 1000);
+
+	// getting variables
+	let hour = document.querySelector(".hr");
+	let minute = document.querySelector(".mn");
+	let second = document.querySelector(".sc");
+	let greeting = document.querySelector(".period");
+	let meridian = document.querySelector(".meridian");
+
+	// getting current time
+	let d = new Date()
+	let hr = d.getHours();
+	let mn = d.getMinutes();
+	let sc = d.getSeconds();
+
+
+			//adding meridain PM oHTML
+			if(hr >= 12){
+				meridian.innerText ="PM"
+				meridian.style.cssText ="font-size:1.3em; font-weight:bold"
+			}else{
+				meridian.innerText = "AM"
+				meridian.style.cssText ="font-size:1.3em; font-weight:bold"	
+			}
+
+
+	//convert the hour to a 12-hour format when egual to 13 but <20 by subtracting 12 from the it and add 0 infront, only subtract 12 from it when its equal to 20 but less than 24 
+	if(hr==0){
+		hour.innerText = 12 + " :";
+		hour.style.cssText ="font-size:1.3em; font-weight:bold"
+	}else if(hr==1 || hr<10){
+		hour.innerText = "0" + hr + " :";
+		hour.style.cssText ="font-size:1.3em; font-weight:bold"
+	}else if(hr==10 || hr<13){
+		hour.innerText = hr +" :";
+		hour.style.cssText ="font-size:1.3em; font-weight:bold"
+	}else if(hr==13 || hr<22){
+		hour.innerText = "0" + (hr-12) + " :";
+		hour.style.cssText ="font-size:1.3em; font-weight:bold"
+	}else if(hr==22 || hr<24){
+		hour.innerText = (hr-12) + " :";
+		hour.style.cssText ="font-size:1.3em; font-weight:bold"
+	}
+	
+
+			// add 0 if minute < 10 (2 igits) 
+			if(mn < 10){
+				minute.innerHTML = "0" + mn + " :";
+				minute.style.cssText ="font-size:1.3em; font-weight:bold"
+			}else{
+				minute.innerText = mn + " :";
+				minute.style.cssText ="font-size:1.3em; font-weight:bold"
+			}
+
+
+	// add 0 if second < 10 (2 igits)
+	if(sc < 10){
+		second.innerHTML = "0" + sc + "&nbsp; &nbsp";
+		second.style.cssText ="font-size:1.3em; font-weight:bold"
+	}else{
+		second.innerHTML = sc + "&nbsp; &nbsp";
+		second.style.cssText ="font-size:1.3em; font-weight:bold"
+	}
+
+			// applying greetings
+			if(hr==0 || hr<6){
+			greeting.innerText = "The Morning is still Dark!"
+			greeting.style.cssText ="font-size:1.5em; font-weight:bold"
+
+			}else if(hr==6 || hr<8){
+				greeting.innerText = "Good Morning! Hope you had a Beautiful Sleep"
+				greeting.style.cssText ="font-size:1.5em; font-weight:bold"
+			}else if(hr==8 || hr<11){
+				greeting.innerText = "Hope you've taken your breakfast"
+				greeting.style.cssText ="font-size:1.5em; font-weight:bold"
+			}else if(hr==11 || hr<12){
+				greeting.innerText = "Only if you decide!"
+				greeting.style.cssText ="font-size:1.5em; font-weight:bold"
+			}else if(hr==12 || hr<16){
+				greeting.innerText = "Good Afternoon!"
+				greeting.style.cssText ="font-size:1.5em; font-weight:bold"
+			}else if(hr==16 || hr<19){
+				greeting.innerText = "Good Evening!"
+				greeting.style.cssText ="font-size:1.5em; font-weight:bold"
+			}else if(hr==19 || hr<24){
+				greeting.innerText = "Why are you awake?"
+				greeting.style.cssText ="font-size:1.5em; font-weight:bold"
+			}
+}
+
+
+
+// date ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+date();
+function date(){
+	let year = document.querySelector(".yr");
+	let month = document.querySelector(".mon");
+	let date = document.querySelector(".dy");
+	let day = document.querySelector(".day");
+
+	let d = new Date();
+	let yr = d.getFullYear();
+	let mth = d.getMonth();
+	let dte = d.getDate();
+	let da = d.getDay();
+	// let date = d.getYear();
+
+	year.innerText = yr;
+	year.style.cssText ="font-size:1.5em; font-weight:bold"
+
+	if(dte==1 || dte==6 || dte==21 || dte==31){
+		date.innerHTML = dte + "<sup>st</sup>";
+		date.style.cssText ="font-size:1.5em; font-weight:bold"
+	}else if(dte==2 || dte==22){
+		date.innerHTML = dte + "<sup>nd</sup>";
+		date.style.cssText ="font-size:1.5em; font-weight:bold"
+	}else if(dte==3 || dte==23){
+		date.innerHTML = dte + "<sup>rd</sup>";
+		date.style.cssText ="font-size:1.5em; font-weight:bold"
+	}else{
+		date.innerHTML = dte + "<sup>th</sup>";
+		date.style.cssText ="font-size:1.5em; font-weight:bold"
+	}
+	
+	var datem = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+	month.innerText = datem[mth];
+	month.style.cssText ="font-size:1.5em; font-weight:bold"
+
+	var datew = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+	day.innerText = datew[da];
+	day.style.cssText ="font-size:1.5em; font-weight:bold";
+}
+											
+
+
+</script>
+</body>
+</html>

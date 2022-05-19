@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			box-sizing:border-box;
+		}
+		body{
+			width:100%;
+			height: 100vh;background: #000;
+			overflow:hidden;
+		}
+		.box{
+			background:#000;
+			margin:30px auto;
+			padding:10px;
+			width:98%;
+			height:90vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			background-image: url(1.jpg);
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	
+		.inner{
+			position:relative;
+			width:300px;
+			height:300px;
+			padding:10px;
+			background: red;
+			border-radius:0 50% 50% 50%;
+			transform: rotate(223deg);
+			box-shadow:-5px -5px #ccc, 5px 5px #ccc;
+		}
+		.other{
+			position:absolute;
+			width:100px;
+			height:100px;
+			background:#ff0000;
+			border-radius: 0 50% 50% 50%;
+			top:0%;
+			right:66.5%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow:hidden;
+		}
+
+		.outer_center{
+			width:80px;
+			height:80px;
+			background: #000;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow:hidden;
+			box-shadow:inset -5px -5px 2px gold;
+		}
+		.point{
+			width:20px;
+			height:20px;
+			background: #ccc;
+			border-radius: 50%;
+		}
+		.line{
+			width:2px;
+			height:250px;
+			background:gold;
+			position: absolute;
+			bottom: 50%;
+			transform-origin: bottom;
+		}
+		.linea{transform: rotate(360deg);height:375px;}
+		.lineb{transform: rotate(355deg);height:365px;}
+		.linec{transform: rotate(350deg);height:355px;}
+		.lined{transform: rotate(345deg);height:335px;}
+		.linee{transform: rotate(340deg);height:320px;}
+		.linef{transform: rotate(335deg);height:307px;}
+		.lineg{transform: rotate(330deg);height:300px;}
+		.lineh{transform: rotate(325deg);height:335px;}
+		.linei{transform: rotate(320deg);height:335px;}
+		.line1{transform: rotate(315deg);height:375px;}
+		.line2{transform: rotate(310deg);height:365px;}
+		.line3{transform: rotate(305deg);height:355px;}
+		.line4{transform: rotate(300deg);height:335px;}
+		.line5{transform: rotate(295deg);height:320px;}
+		.line6{transform: rotate(290deg);height:307px;}
+		.line7{transform: rotate(285deg);height:300px;}
+		.line8{transform: rotate(280deg);height:335px;}
+		.line9{transform: rotate(275deg);height:335px;}
+		.line10{transform: rotate(270deg);height:335px;}
+		.line11{transform: rotate(265deg);height:335px;}
+		.line12{transform: rotate(260deg);height:335px;}
+		.line13{transform: rotate(255deg);height:335px;}
+		.line14{transform: rotate(250deg);height:335px;}
+		.line15{transform: rotate(245deg);height:335px;}
+		.line16{transform: rotate(240deg);height:335px;}
+		.line17{transform: rotate(235deg);height:335px;}
+
+		.text{
+			width:250px;
+			height: 120px;
+			background:gold;
+			z-index: 1;
+			position: absolute;
+			border-radius:25px;
+			top:35%;
+			left:50%;
+			padding:10px;
+			box-shadow:inset -5px -5px 2px #000, inset 5px 5px 2px #000;
+			transform: translateX(-50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.textMain{
+			width:90%;
+			height:80%;
+			background:#ccc;
+			z-index: 2;
+			border-radius:25px;
+			padding:10px;
+			box-shadow:-5px -5px 5px #000, 5px 5px 5px #000;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		.textMain h1{
+			font-size:1.3rem;
+			font-weight:600;
+			color:gold;
+			line-height:1.7rem;
+			text-shadow:-1px -1px 1px #000, 1px 1px 1px #000;
+		}
+		.text2{
+			color: #fff;
+			z-index: 1;
+			position: absolute;
+			top:60%;
+			left:50%;
+			font-size: 1.5rem;
+			font-style: italic;
+			transform: translateX(-50%);
+			text-shadow:-1px -1px 1px #000, 1px 1px 1px #000;
+		}
+		.text1{
+			color: red;
+			z-index: 1;
+			position: absolute;
+			top:26%;
+			left:50%;
+			font-size: 1.5rem;
+			font-style: italic;
+			transform: translateX(-50%);
+			text-shadow:-1px -1px #fff, 1px 1px #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="text1">27<sup>th</sup> August</div>
+		<div class="text">
+			<div class="textMain"><h1>Happy Birthday<br>Odogwu<br>1</h1></div>
+		</div>
+		<div class="text2">Best of Wishes</div>
+		<div class="inner">
+			<div class="other">
+				<div class="outer_center">
+					<div class="point"></div>
+                    <div class="line linea"></div>
+					<div class="line lineb"></div>
+					<div class="line linec"></div>
+					<div class="line lined"></div>
+					<div class="line linee"></div>
+					<div class="line linef"></div>
+					<div class="line lineg"></div>
+					<div class="line lineh"></div>
+					<div class="line linei"></div>
+					<div class="line line1"></div>
+					<div class="line line2"></div>
+					<div class="line line3"></div>
+					<div class="line line4"></div>
+					<div class="line line5"></div>
+					<div class="line line6"></div>
+					<div class="line line7"></div>
+					<div class="line line8"></div>
+					<div class="line line9"></div>
+					<div class="line line10"></div>
+					<div class="line line11"></div>
+					
+							
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
